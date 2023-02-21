@@ -40,6 +40,7 @@ class MessageConstant: NSObject {
     static let ErrorEmail: String = "Email does not exist in our database, please try alternative."
     static let SentEmail: String = "Email sent. Check your inbox"
     static let SMSSent: String = "SMS sent. Check your phone"
+    static let PWDMustContain: String = "Password length should be min 6 characters"
 
     static let Name_Title : String = "Please enter the Name/Title"
     static let NameValidation : String = "Name and title should be between 3 to 50 characters"
@@ -47,6 +48,10 @@ class MessageConstant: NSObject {
     static let CountrySelection: String = "Please select the country"
     static let provienceSelection: String = "Please select the provience"
     static let citySelection: String = "Please select the city"
+    
+    static let Job_Title : String = "Please enter the Job Title"
+    static let location : String = "Please enter the location"
+    static let CompanyName : String = "Please enter the Company Name"
 
     //pragma mark -Alert validation
     static let k_AlertOK: String = "OK"

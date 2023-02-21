@@ -14,12 +14,12 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func btnOpenSideMenu(_ sender: Any) {
         self.sideMenuController?.revealMenu()
     }
     @IBAction func btnOnLogout(_ sender: Any) {
         
+        objAppShareData.signOut()
     }
 }

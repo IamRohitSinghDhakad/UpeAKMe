@@ -71,6 +71,8 @@ open class DropDown : UITextField{
         }
     }
     public var optionIds : [Int]?
+    
+    
     var searchText = String() {
         didSet{
             if searchText == "" {

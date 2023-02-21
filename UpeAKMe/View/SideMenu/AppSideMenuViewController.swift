@@ -71,7 +71,7 @@ class AppSideMenuViewController: UIViewController {
     
     private func controllerMenuSetup() {
         sideMenuController?.cache(viewControllerGenerator: {
-            self.storyboard?.instantiateViewController(withIdentifier: "ContentNavigation")
+            self.storyboard?.instantiateViewController(withIdentifier: "MyProfileViewController")
         }, with: "0")
         
     }
@@ -163,6 +163,10 @@ extension AppSideMenuViewController: UITableViewDelegate, UITableViewDataSource 
         let row = indexPath.row
         
         self.selectedIndexpath = row
+        
+        if row == 1{
+            exit(EXIT_SUCCESS)
+        }
         
             sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
             sideMenuController?.hideMenu()

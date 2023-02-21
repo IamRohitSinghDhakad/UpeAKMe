@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		302C014AFD2C4B69739084F0 /* Pods_UpeAKMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874191DCCD504C37B320A728 /* Pods_UpeAKMe.framework */; };
+		F906562F28CDC9B000476D65 /* DesiredFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906562E28CDC9B000476D65 /* DesiredFieldModel.swift */; };
+		F906563128CDD4AF00476D65 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563028CDD4AF00476D65 /* PopUpViewController.swift */; };
+		F906563328CDFADA00476D65 /* OptionsModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563228CDFADA00476D65 /* OptionsModelClass.swift */; };
+		F906563528CDFB5200476D65 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563428CDFB5200476D65 /* OptionsTableViewCell.swift */; };
+		F906563828CE5BAD00476D65 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563728CE5BAD00476D65 /* MyProfileViewController.swift */; };
 		F9A5BAF528B0C8E000C2FFE2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF428B0C8E000C2FFE2 /* ForgotPasswordViewController.swift */; };
 		F9A5BAF728B0D60100C2FFE2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF628B0D60100C2FFE2 /* CreateAccountViewController.swift */; };
 		F9A5BAF928B0E28200C2FFE2 /* DesiredJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF828B0E28200C2FFE2 /* DesiredJobViewController.swift */; };
@@ -60,6 +65,11 @@
 		096FE809C19255E6BB51962C /* Pods-UpeAKMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpeAKMe.release.xcconfig"; path = "Target Support Files/Pods-UpeAKMe/Pods-UpeAKMe.release.xcconfig"; sourceTree = "<group>"; };
 		874191DCCD504C37B320A728 /* Pods_UpeAKMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpeAKMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CACE52B9E8C762801F07194 /* Pods-UpeAKMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpeAKMe.debug.xcconfig"; path = "Target Support Files/Pods-UpeAKMe/Pods-UpeAKMe.debug.xcconfig"; sourceTree = "<group>"; };
+		F906562E28CDC9B000476D65 /* DesiredFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesiredFieldModel.swift; sourceTree = "<group>"; };
+		F906563028CDD4AF00476D65 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		F906563228CDFADA00476D65 /* OptionsModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsModelClass.swift; sourceTree = "<group>"; };
+		F906563428CDFB5200476D65 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
+		F906563728CE5BAD00476D65 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		F9A5BAF428B0C8E000C2FFE2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F9A5BAF628B0D60100C2FFE2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F9A5BAF828B0E28200C2FFE2 /* DesiredJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesiredJobViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +156,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F906563628CE5B9500476D65 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F906563728CE5BAD00476D65 /* MyProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		F9BA01BF28AF68CF002A9579 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +214,7 @@
 		F9BA01E028AF9BB3002A9579 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F906563628CE5B9500476D65 /* Profile */,
 				F9EA6D0128B246020016F32B /* Home */,
 				F9EA6CFB28B243290016F32B /* SideMenu */,
 				F9BA01E228B01BE7002A9579 /* Auth */,
@@ -207,8 +226,10 @@
 		F9BA01E128AF9BC0002A9579 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F906563228CDFADA00476D65 /* OptionsModelClass.swift */,
 				F9EA6CF728B2324F0016F32B /* userDetailModel.swift */,
 				F9EA6CF928B232630016F32B /* SignInDetail.swift */,
+				F906562E28CDC9B000476D65 /* DesiredFieldModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,8 +237,10 @@
 		F9BA01E228B01BE7002A9579 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				F906563428CDFB5200476D65 /* OptionsTableViewCell.swift */,
 				F9B2C4EA28B15A7000328E3F /* Auth.storyboard */,
 				F9BA01E528B01C58002A9579 /* SelectLanguageViewController.swift */,
+				F906563028CDD4AF00476D65 /* PopUpViewController.swift */,
 				F9BA01EC28B028EF002A9579 /* LoginViewController.swift */,
 				F9A5BAF428B0C8E000C2FFE2 /* ForgotPasswordViewController.swift */,
 				F9A5BAF628B0D60100C2FFE2 /* CreateAccountViewController.swift */,
@@ -513,6 +536,7 @@
 				F9BA022628B032E9002A9579 /* WebServiceHelper.swift in Sources */,
 				F9BA01F328B02E1A002A9579 /* ValidationManager.swift in Sources */,
 				F9B2C4DD28B1209000328E3F /* WorkExperienceViewController.swift in Sources */,
+				F906563528CDFB5200476D65 /* OptionsTableViewCell.swift in Sources */,
 				F9A5BAF928B0E28200C2FFE2 /* DesiredJobViewController.swift in Sources */,
 				F9BA021828B032BA002A9579 /* TransitionContext.swift in Sources */,
 				F9A5BAFB28B1150200C2FFE2 /* LocationInfoViewController.swift in Sources */,
@@ -523,13 +547,17 @@
 				F9A5BAF528B0C8E000C2FFE2 /* ForgotPasswordViewController.swift in Sources */,
 				F9BA01EF28B02BFD002A9579 /* AlertViewController.swift in Sources */,
 				F9BA01F128B02D43002A9579 /* MessageConstant.swift in Sources */,
+				F906562F28CDC9B000476D65 /* DesiredFieldModel.swift in Sources */,
 				F9EA6D0028B2434D0016F32B /* AppSideMenuTableViewCell.swift in Sources */,
+				F906563828CE5BAD00476D65 /* MyProfileViewController.swift in Sources */,
 				F9A5BAF728B0D60100C2FFE2 /* CreateAccountViewController.swift in Sources */,
 				F9BA021A28B032BA002A9579 /* Segue.swift in Sources */,
 				F9BA021728B032BA002A9579 /* Delegate.swift in Sources */,
 				F9BA01EB28B02420002A9579 /* CustomView.swift in Sources */,
+				F906563328CDFADA00476D65 /* OptionsModelClass.swift in Sources */,
 				F9BA022528B032E9002A9579 /* WebServiceManager.swift in Sources */,
 				F9EA6CFA28B232630016F32B /* SignInDetail.swift in Sources */,
+				F906563128CDD4AF00476D65 /* PopUpViewController.swift in Sources */,
 				F9B2C4DF28B1305100328E3F /* EducationViewController.swift in Sources */,
 				F9BA022128B032BA002A9579 /* SWRevealViewController.m in Sources */,
 				F9BA01D028AF68D0002A9579 /* ViewController.swift in Sources */,
@@ -717,6 +745,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H3Q388C2B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpeAKMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -746,6 +775,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H3Q388C2B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UpeAKMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

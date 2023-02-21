@@ -52,7 +52,7 @@ class RecapViewController: UIViewController {
     }
     
     @IBAction func btnOnNext(_ sender: Any) {
-        self.makeRootController()
+        self.call_wsRegisterUser()
     }
     
 }
@@ -91,31 +91,163 @@ extension RecapViewController{
     
     func loadUserDetailsForSignIn(){
         
-        self.lblFirstName.text! = objAppShareData.signInData.strFirstName
-        self.lblLastName.text! = objAppShareData.signInData.strLastName
-        self.lblPhoneNumber.text! = objAppShareData.signInData.strPhoneNumber
-        self.lblEmail.text! = objAppShareData.signInData.strEmail
-        self.lblDesiredField.text! = objAppShareData.signInData.strSelectedDesiredField
-        self.lblJobType.text! = objAppShareData.signInData.strSelectedDesiredJobType
-        self.lbldesiredWorkSetting.text! = objAppShareData.signInData.strSelectedDesiredWorkSetting
-        self.lblDesiredPayAnnual.text! = objAppShareData.signInData.strSelectedDesiredPayAnnual
-        self.lblWorkSchedule.text! = objAppShareData.signInData.strSelectedDesiredWorkSchedule
-        self.lblRelocation.text! = objAppShareData.signInData.strSelectedDesiredRelocation
-        self.lblDesiredCountry.text! = objAppShareData.signInData.strSelectedDesiredCountry
-        self.lblDesiredState.text! = objAppShareData.signInData.strSelectedDesiredProvience
-        self.lblDesiredCity.text! = objAppShareData.signInData.strSelectedDesiredCity
-        self.lblDesiredVaccation.text! = objAppShareData.signInData.strSelectedDesiredVaccation
-        self.lblJobTitle.text! = objAppShareData.signInData.strJobTitle1
-        self.lblCompanyName.text! = objAppShareData.signInData.strCompanyName1
-        self.lblJobLocation.text! = objAppShareData.signInData.strLocation1
-        self.lblJobDuration.text! = objAppShareData.signInData.strWorkDuration1
-        self.lblLevelEducation.text! = objAppShareData.signInData.strLevelEducation
-        self.lblCertificate.text! = objAppShareData.signInData.strCertificateLicense
-        self.lblSkills.text! = objAppShareData.signInData.strSkills
-        self.lblSpokenLanguage.text! = objAppShareData.signInData.strSpokenLanguage
-        self.lblWrittenLanguage.text! = objAppShareData.signInData.strWrittenLanguage
-        self.lblSignLanguage.text! = "No"
-        self.lblVolunteerWork.text! = objAppShareData.signInData.strVolunteerWork
+        self.lblFirstName.text! = objAppShareData.UserDetail.strFirstName
+        self.lblLastName.text! = objAppShareData.UserDetail.strLastName
+        self.lblPhoneNumber.text! = objAppShareData.UserDetail.strPhoneNumber
+        self.lblEmail.text! = objAppShareData.UserDetail.strEmail
+        self.lblDesiredField.text! = objAppShareData.UserDetail.strSelectedDesiredField
+        self.lblJobType.text! = objAppShareData.UserDetail.strSelectedDesiredJobType
+        self.lbldesiredWorkSetting.text! = objAppShareData.UserDetail.strSelectedDesiredWorkSetting
+        self.lblDesiredPayAnnual.text! = objAppShareData.UserDetail.strSelectedDesiredPayAnnual
+        self.lblWorkSchedule.text! = objAppShareData.UserDetail.strSelectedDesiredWorkSchedule
+        self.lblRelocation.text! = objAppShareData.UserDetail.strSelectedDesiredRelocation
+        self.lblDesiredCountry.text! = objAppShareData.UserDetail.strSelectedDesiredCountry
+        self.lblDesiredState.text! = objAppShareData.UserDetail.strSelectedDesiredProvience
+        self.lblDesiredCity.text! = objAppShareData.UserDetail.strSelectedDesiredCity
+        self.lblDesiredVaccation.text! = objAppShareData.UserDetail.strSelectedDesiredVaccation
+        self.lblJobTitle.text! = objAppShareData.UserDetail.strJobTitle1 + "," + objAppShareData.UserDetail.strJobTitle2
+        self.lblCompanyName.text! = objAppShareData.UserDetail.strCompanyName1 + "," + objAppShareData.UserDetail.strCompanyName2
+        self.lblJobLocation.text! = objAppShareData.UserDetail.strLocation1 + "," + objAppShareData.UserDetail.strLocation2
+        self.lblJobDuration.text! = objAppShareData.UserDetail.strWorkDuration1 + "," + objAppShareData.UserDetail.strWorkDuration2
+        self.lblLevelEducation.text! = objAppShareData.UserDetail.strLevelEducation
+        self.lblCertificate.text! = objAppShareData.UserDetail.strCertificateLicense
+        self.lblSkills.text! = objAppShareData.UserDetail.strSkills
+        self.lblSpokenLanguage.text! = objAppShareData.UserDetail.strSpokenLanguage
+        self.lblWrittenLanguage.text! = objAppShareData.UserDetail.strWrittenLanguage
+        self.lblSignLanguage.text! = objAppShareData.UserDetail.strDesiredValue
+        self.lblVolunteerWork.text! = objAppShareData.UserDetail.strVolunteerWork
         
     }
 }
+
+
+extension RecapViewController{
+    
+    func call_wsRegisterUser(){
+        
+        self.view.endEditing(true)
+        if !objWebServiceManager.isNetworkAvailable(){
+            objWebServiceManager.hideIndicator()
+            objAlert.showAlert(message: "No Internet Connection", title: "Alert", controller: self)
+            return
+        }
+        
+        objWebServiceManager.showIndicator()
+        
+        var dictParam = [String:Any]()
+        
+        
+        var uri = ""
+        if objAppShareData.isComingFromEdit{
+            uri = WsUrl.url_completeProfile
+            
+            dictParam = ["user_id":objAppShareData.UserDetail.strUserId,
+                "first_name":self.lblFirstName.text!,
+                             "last_name":self.lblLastName.text!,
+                             "name":lblFirstName.text! + lblLastName.text!,
+                             "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
+                             "email":lblEmail.text!,
+                             "password":objAppShareData.UserDetail.strPassword,
+                             "address":"",
+                             "lat":"",
+                             "lng":"",
+                             "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
+                             "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
+                             "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID, 
+                             "device_type":"IOS",
+                             "desired_field":self.lblDesiredField.text!,
+                             "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID, //need to send ID
+                             "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
+                             "job_type":self.lblJobType.text!,
+                             "desired_work":self.lbldesiredWorkSetting.text!,
+                             "work_shedule":self.lblWorkSchedule.text!,
+                             "desired_annual_pay":self.lblDesiredPayAnnual.text!,
+                             "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
+                             "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
+                             "job_tittle":self.lblJobTitle.text!,
+                             "company_name":self.lblCompanyName.text!,
+                             "job_location":self.lblJobLocation.text!,
+                             "job_duration":self.lblJobDuration.text!,
+                             "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1 + "," + objAppShareData.UserDetail.strCurrentlyWorkingHere2,
+                             "level_education":self.lblLevelEducation.text!,
+                             "certificate_tbd":self.lblCertificate.text!,
+                             "edu_skill":objAppShareData.UserDetail.strSkills,
+                             "spoken_language":self.lblSpokenLanguage.text!,
+                             "written_language":self.lblWrittenLanguage.text!,
+                             "desired_values":self.lblSignLanguage.text!,
+                             "volunteer_work":self.lblVolunteerWork.text!,
+                             "register_id":""
+            ]as [String:Any]
+            
+        }else{
+            uri = WsUrl.url_SignUp
+            
+            dictParam = ["first_name":self.lblFirstName.text!,
+                             "last_name":self.lblLastName.text!,
+                             "name":lblFirstName.text! + lblLastName.text!,
+                             "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
+                             "email":lblEmail.text!,
+                             "password":objAppShareData.UserDetail.strPassword,
+                             "address":"",
+                             "lat":"",
+                             "lng":"",
+                             "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
+                             "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
+                             "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID,
+                             "device_type":"IOS",
+                             "desired_field":self.lblDesiredField.text!,
+                             "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID,
+                             "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
+                             "job_type":self.lblJobType.text!,
+                             "desired_work":self.lbldesiredWorkSetting.text!,
+                             "work_shedule":self.lblWorkSchedule.text!,
+                             "desired_annual_pay":self.lblDesiredPayAnnual.text!,
+                             "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
+                             "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
+                             "job_tittle":self.lblJobTitle.text!,
+                             "company_name":self.lblCompanyName.text!,
+                             "job_location":self.lblJobLocation.text!,
+                             "job_duration":self.lblJobDuration.text!,
+                             "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1,
+                             "level_education":self.lblLevelEducation.text!,
+                             "certificate_tbd":self.lblCertificate.text!,
+                             "edu_skill":objAppShareData.UserDetail.strSkills,
+                             "spoken_language":self.lblSpokenLanguage.text!,
+                             "written_language":self.lblWrittenLanguage.text!,
+                             "desired_values":self.lblSignLanguage.text!,
+                             "volunteer_work":self.lblVolunteerWork.text!,
+                             "register_id":""
+            ]as [String:Any]
+        }
+        
+        print(dictParam)
+        
+        objWebServiceManager.requestPost(strURL: uri, queryParams: [:], params: dictParam, strCustomValidation: "", showIndicator: false) { response in
+            
+            objWebServiceManager.hideIndicator()
+            
+            let status = (response["status"] as? Int)
+            let message = (response["message"] as? String)
+            debugPrint(response)
+            if status == MessageConstant.k_StatusCode{
+                objAppShareData.isComingFromEdit = false
+                guard let dictUserData = response["result"]as? [String:Any] else{return}
+                debugPrint(dictUserData)
+                objAppShareData.SaveUpdateUserInfoFromAppshareData(userDetail: dictUserData)
+                objAppShareData.fetchUserInfoFromAppshareData()
+                self.makeRootController()
+                
+            }else{
+                if let resultmessage = response["result"]as? String{
+                    objAlert.showAlert(message: resultmessage, controller: self)
+                }
+                
+                debugPrint(message ?? "Error Occured")
+            }
+            
+        } failure: { Error in
+            debugPrint(Error)
+        }
+    }
+}
+

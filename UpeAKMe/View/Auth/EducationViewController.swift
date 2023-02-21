@@ -14,25 +14,23 @@ class EducationViewController: UIViewController {
     @IBOutlet var tfLevelEducation: DropDown!
     @IBOutlet var tfCertificateLevel: UITextField!
     @IBOutlet var lblSkill: UILabel!
-    @IBOutlet var tfSpokenEnglish: DropDown!
-    @IBOutlet var tfWrittenLanguage: DropDown!
     @IBOutlet var txtVw: RDTextView!
+    @IBOutlet weak var lblSpokenLanguage: UILabel!
+    @IBOutlet weak var lblWrittenLanguage: UILabel!
+    @IBOutlet weak var lblDesired: UILabel!
     
     //MARK: - Variables
     var strSelectedSkillID:String?
     let  levelEducationArray: [String] = ["Level Education", "High school", "College", "Professional diploma", "Trade school", "University", "Bachelor's degree", "Master's degree", "Doctorate"]
-    let  spokenLanguageArray: [String] = ["Spoken Language", "French", "English", "Spanish", "Italian", "Greek", "Chinese", "Japanese", "Arabic", "Other"]
-    let  writtenLanguageArray: [String] =  ["Written Language", "French", "English", "Spanish", "Italian", "Greek", "Chinese", "Japanese", "Arabic", "Other"]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         //Delegate
         tfLevelEducation.delegate = self
-        tfSpokenEnglish.delegate = self
-        tfWrittenLanguage.delegate = self
         //=========== XXXX ============//
         setupDropdown()
+    
         // Do any additional setup after loading the view.
     }
 
@@ -49,6 +47,66 @@ class EducationViewController: UIViewController {
         saveDataLocalcy()
         pushVc(viewConterlerId: "RecapViewController")
     }
+    
+    @IBAction func btnOnWrittenLanguage(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "Auth", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController")as! PopUpViewController
+        vc.strTitle = "Written Language".localized()
+        vc.strIsComingFrom = "WrittenLanguage"
+        vc.closerForSelectionTable = {[weak self] dict in
+            if dict.count != 0{
+                self?.lblWrittenLanguage.text! = dict["WrittenLanguage"]as? String ?? ""
+            }
+        }
+        self.isModalInPresentation = true
+        self.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true,completion: nil)
+    }
+    
+    @IBAction func btnOnSpokenLanguage(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "Auth", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController")as! PopUpViewController
+        vc.strTitle = "Spoken Language".localized()
+        vc.strIsComingFrom = "SpokenLanguage"
+        vc.closerForSelectionTable = {[weak self] dict in
+            if dict.count != 0{
+                self?.lblSpokenLanguage.text! = dict["SpokenLanguage"]as? String ?? ""
+            }
+        }
+        self.isModalInPresentation = true
+        self.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true,completion: nil)
+    }
+    
+    @IBAction func btnOnDesiredValues(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "Auth", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController")as! PopUpViewController
+        vc.strTitle = "Desired Values@Work".localized()
+        vc.strIsComingFrom = "Desired"
+        vc.closerForSelectionTable = {[weak self] dict in
+            if dict.count != 0{
+                self?.lblDesired.text! = dict["Desired"]as? String ?? ""
+            }
+        }
+        self.isModalInPresentation = true
+        self.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true,completion: nil)
+    }
+    @IBAction func btnOnSkill(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "Auth", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController")as! PopUpViewController
+        vc.strTitle = "Select Skill".localized()
+        vc.strIsComingFrom = "Skill"
+        vc.closerForSelectionTable = {[weak self] dict in
+            if dict.count != 0{
+                self?.strSelectedSkillID = dict["skill"]as? String
+                self?.lblSkill.text! = dict["Skill"]as? String ?? ""
+            }
+        }
+        self.isModalInPresentation = true
+        self.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true,completion: nil)
+    }
 }
 
 extension EducationViewController: UITextFieldDelegate{
@@ -57,27 +115,12 @@ extension EducationViewController: UITextFieldDelegate{
         func setupDropdown() {
            //==============================//
             tfLevelEducation.optionArray = levelEducationArray
-            tfSpokenEnglish.optionArray = spokenLanguageArray
-            tfWrittenLanguage.optionArray = writtenLanguageArray
-           
             
             tfLevelEducation.text = levelEducationArray[0]
-            tfSpokenEnglish.text = spokenLanguageArray[0]
-            tfWrittenLanguage.text = writtenLanguageArray[0]
             
             tfLevelEducation.didSelect{(selectedText , index ,id) in
                 self.tfLevelEducation.text = selectedText
                 self.tfLevelEducation.hideList()
-            }
-            
-            tfSpokenEnglish.didSelect{(selectedText , index ,id) in
-                self.tfSpokenEnglish.text = selectedText
-                self.tfSpokenEnglish.hideList()
-            }
-            
-            tfWrittenLanguage.didSelect{(selectedText , index ,id) in
-                self.tfWrittenLanguage.text = selectedText
-                self.tfWrittenLanguage.hideList()
             }
         }
     
@@ -88,34 +131,60 @@ extension EducationViewController{
     
     //MARK: - Save Localy data
     func saveDataLocalcy() {
-        objAppShareData.signInData.strLevelEducation = self.tfLevelEducation.text!
-        objAppShareData.signInData.strCertificateLicense = self.tfCertificateLevel.text!
-        objAppShareData.signInData.strSkills = self.lblSkill.text!
-        objAppShareData.signInData.strSkillID = self.strSelectedSkillID ?? "0"
-        objAppShareData.signInData.strSpokenLanguage = self.tfSpokenEnglish.text!
-        objAppShareData.signInData.strWrittenLanguage = self.tfWrittenLanguage.text!
-        objAppShareData.signInData.strVolunteerWork = self.txtVw.text!
+        objAppShareData.UserDetail.strLevelEducation = self.tfLevelEducation.text!
+        objAppShareData.UserDetail.strCertificateLicense = self.tfCertificateLevel.text!
+        objAppShareData.UserDetail.strSkills = self.lblSkill.text!
+        objAppShareData.UserDetail.strDesiredValue = self.lblDesired.text!
+        objAppShareData.UserDetail.strSkillID = self.strSelectedSkillID ?? "0"
+        objAppShareData.UserDetail.strSpokenLanguage = self.lblSpokenLanguage.text!
+        objAppShareData.UserDetail.strWrittenLanguage = self.lblWrittenLanguage.text!
+        objAppShareData.UserDetail.strVolunteerWork = self.txtVw.text!
     }
     
     //MARK: - Fetch Saved Localy data
     func checkSavedDataAndFill(){
-        if let lvlEducation = objAppShareData.signInData.strLevelEducation as String?{
+        if let lvlEducation = objAppShareData.UserDetail.strLevelEducation as String?{
             self.tfLevelEducation.text! = lvlEducation
         }
-        if let certificate = objAppShareData.signInData.strCertificateLicense as String?{
+        if let certificate = objAppShareData.UserDetail.strCertificateLicense as String?{
             self.tfCertificateLevel.text! = certificate
         }
-        if let skill = objAppShareData.signInData.strSkills as String?{
-            self.lblSkill.text! = skill
+        if let skill = objAppShareData.UserDetail.strSkills as String?{
+            if skill == ""{
+                self.lblSkill.text! = "Choose your best skills"
+                self.lblSkill.textColor = .lightGray
+            }else{
+                self.lblSkill.text! = skill
+                self.lblSkill.textColor = .black
+            }
         }
-        if let spokenLanguage = objAppShareData.signInData.strSpokenLanguage as String?{
-            self.tfSpokenEnglish.text! = spokenLanguage
+        if let desired = objAppShareData.UserDetail.strDesiredValue as String?{
+            if desired == ""{
+                self.lblDesired.text! = "Desired Values@Work"
+                self.lblDesired.textColor = .lightGray
+            }else{
+                self.lblDesired.text! = desired
+                self.lblDesired.textColor = .black
+            }
         }
-        if let writtenLanguage = objAppShareData.signInData.strWrittenLanguage as String?{
-            self.tfWrittenLanguage.text! = writtenLanguage
+        if let spokenLanguage = objAppShareData.UserDetail.strSpokenLanguage as String?{
+            if spokenLanguage == ""{
+                self.lblSpokenLanguage.text! = "Spoken Language"
+            }else{
+                self.lblSpokenLanguage.text! = spokenLanguage
+            }
+            
+        }
+        if let writtenLanguage = objAppShareData.UserDetail.strWrittenLanguage as String?{
+            if writtenLanguage == ""{
+                self.lblWrittenLanguage.text! = "Written Language"
+            }else{
+                self.lblWrittenLanguage.text! = writtenLanguage
+            }
+            
         }
         
-        if let volunteerWork = objAppShareData.signInData.strVolunteerWork as String?{
+        if let volunteerWork = objAppShareData.UserDetail.strVolunteerWork as String?{
             self.txtVw.text! = volunteerWork
         }
     }

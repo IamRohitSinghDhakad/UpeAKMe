@@ -23,7 +23,7 @@ class AppSharedData: NSObject {
     
     //MARK: - Variables
     var UserDetail = userDetailModel(dict: [:])
-    var signInData = SignInDetail(dict: [:])
+    var isComingFromEdit = false
     
     //MARK: - Check Login Status
     open var isLoggedIn: Bool {
@@ -61,4 +61,25 @@ class AppSharedData: NSObject {
         }
         return mutableDict
     }
+    
+    func signOut() {
+        objAppShareData.isComingFromEdit = false
+        UserDefaults.standard.removeObject(forKey: UserDefaults.Keys.userInfo)
+        UserDetail = userDetailModel(dict: [:])
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let vc = (UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController)!
+        let navController = UINavigationController(rootViewController: vc)
+        navController.isNavigationBarHidden = true
+        appDelegate.window?.rootViewController = navController
+    }
+    
+    
+    func makeRootControllerSideMenu(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let vc = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SideMenuController") as? SideMenuController)!
+        let navController = UINavigationController(rootViewController: vc)
+        navController.isNavigationBarHidden = true
+        appDelegate.window?.rootViewController = navController
+    }
+
 }

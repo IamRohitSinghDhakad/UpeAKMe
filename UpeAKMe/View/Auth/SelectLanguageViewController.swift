@@ -19,11 +19,12 @@ class SelectLanguageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        goToNextController()
         self.veFrench.layer.borderColor = UIColor.lightGray.cgColor
         self.lblFrench.textColor = UIColor.black
         self.vwEnglish.layer.borderColor = UIColor.init(named: "AppDefaultGolden")?.cgColor
         self.lblEnglish.textColor = UIColor.init(named: "AppDefaultGolden")
-        objAppShareData.signInData.strSelectedLanguage = AppLanguage.English
+        objAppShareData.UserDetail.strSelectedLanguage = AppLanguage.English
        
     }
     
@@ -33,7 +34,7 @@ class SelectLanguageViewController: UIViewController {
         
         self.vwEnglish.layer.borderColor = UIColor.init(named: "AppDefaultGolden")?.cgColor
         self.lblEnglish.textColor = UIColor.init(named: "AppDefaultGolden")
-        objAppShareData.signInData.strSelectedLanguage = AppLanguage.English
+        objAppShareData.UserDetail.strSelectedLanguage = AppLanguage.English
     }
     
     @IBAction func btnOnfrench(_ sender: Any) {
@@ -42,7 +43,7 @@ class SelectLanguageViewController: UIViewController {
         
         self.veFrench.layer.borderColor = UIColor.init(named: "AppDefaultGolden")?.cgColor
         self.lblFrench.textColor = UIColor.init(named: "AppDefaultGolden")
-        objAppShareData.signInData.strSelectedLanguage = AppLanguage.French
+        objAppShareData.UserDetail.strSelectedLanguage = AppLanguage.French
         
     }
     
@@ -50,4 +51,21 @@ class SelectLanguageViewController: UIViewController {
         self.pushVc(viewConterlerId: "LoginViewController")
     }
     
+    
+    //MARK: - Redirection Methods
+    func goToNextController() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if AppSharedData.sharedObject().isLoggedIn {
+            let vc = (self.mainStoryboard.instantiateViewController(withIdentifier: "SideMenuController") as? SideMenuController)!
+            let navController = UINavigationController(rootViewController: vc)
+            navController.isNavigationBarHidden = true
+            appDelegate.window?.rootViewController = navController
+        }
+        else {
+//            let vc = (self.authStoryboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController)!
+//            let navController = UINavigationController(rootViewController: vc)
+//            navController.isNavigationBarHidden = true
+//            appDelegate.window?.rootViewController = navController
+        }
+    }
 }

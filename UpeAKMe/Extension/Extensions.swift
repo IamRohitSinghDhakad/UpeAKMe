@@ -225,6 +225,11 @@ extension String {
             value: self,
             comment: self)
     }
+    
+    var withoutSpecialCharacters: String {
+        return self.components(separatedBy: CharacterSet.symbols).joined(separator: "")
+    }
+
 }
 
 extension UIImageView {

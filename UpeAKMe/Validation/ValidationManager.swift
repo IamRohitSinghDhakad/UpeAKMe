@@ -57,6 +57,17 @@ class Validation_Manager {
         return passwordTest.evaluate(with: testStr)
     }
     
+    func isValidPassword6(testStr:String?) -> Bool {
+        guard testStr != nil else { return false }
+     
+        // at least one uppercase,
+        // at least one digit
+        // at least one lowercase
+        // 6 characters total
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", ".{6,8}")
+        return passwordTest.evaluate(with: testStr)
+    }
+    
    
     
 // Valid phone number ----

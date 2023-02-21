@@ -21,7 +21,9 @@ class SignInDetail: NSObject {
     var strSelectedLanguage    : String = ""
     //Desired Job Controler Variables
     var strSelectedDesiredField: String = ""
+    var strSelectedDesiredFieldID: String = ""
     var strSelectedDesiredFieldPosition: String = ""
+    var strSelectedDesiredFieldPositionID:String = ""
     var strSelectedDesiredJobType: String = ""
     var strSelectedDesiredWorkSetting: String = ""
     var strSelectedDesiredWorkSchedule: String = ""
@@ -59,6 +61,9 @@ class SignInDetail: NSObject {
     
     
     init(dict : [String:Any]) {
+        
+        
+        
     
   }
 }

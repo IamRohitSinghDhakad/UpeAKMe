@@ -20,6 +20,14 @@ enum WorkSetting{
     static let strHybrid = "hybrid".localized()
     static let strInOffice = "inOffice".localized()
 }
+enum WorkSchedule{
+    static let strDayTime = "Day Time".localized()
+    static let strNightTime = "Night Time".localized()
+    static let strMondaySaturday = "Monday-Saturday".localized()
+    static let strMondayFriday = "Monday-Friday".localized()
+    static let strOther = "Other".localized()
+    
+}
 enum AppLanguage{
     static let English = "English".localized()
     static let French = "French".localized()

@@ -63,10 +63,10 @@ class WebServiceManager: NSObject {
     
     //MARK:- Show/hide Indicator
     func showIndicator(){
-        self.window?.isUserInteractionEnabled = false
-        //DispatchQueue.main.async {
-        SVProgressHUD.show()
-        //}
+        DispatchQueue.main.async {
+            self.window?.isUserInteractionEnabled = false
+            SVProgressHUD.show()
+        }
     }
     
     func hideIndicator(){
