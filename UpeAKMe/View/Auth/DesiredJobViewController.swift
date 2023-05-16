@@ -43,8 +43,8 @@ class DesiredJobViewController: UIViewController, UITextFieldDelegate {
     var selectedDesiredFieldID:String?
     var selectedDesiredPositionFieldID:String?
     var selectedDesiredWorkSchedule:String?
-    let desiredPayAnnualArray: [String] = ["What is your desired pay annual", "30000+", "40000+", "50000+", "60000+", "70000+", "80000+", "100000+"]
-    let desiredVacationArray: [String] = ["Desired Vacation", "2 weeks+", "3 week+", "4 weeks+", "Unlimited"]
+    let desiredPayAnnualArray: [String] = ["What is your desired pay annual".localized(), "30000+", "40000+", "50000+", "60000+", "70000+", "80000+", "100000+"]
+    let desiredVacationArray: [String] = ["Desired Vacation".localized(), "2 weeks+".localized(), "3 week+".localized(), "4 weeks+".localized(), "Unlimited".localized()]
     var arrSelectedDesiredWorkSchedule = [String]()
     var arrSelectedJobType = [String]()
     var arrSelectedDesiredWorkSetting = [String]()
@@ -278,6 +278,8 @@ extension DesiredJobViewController{
         objAppShareData.UserDetail.strSelectedDesiredWorkSchedule = self.selectedDesiredWorkSchedule ?? ""
         objAppShareData.UserDetail.strSelectedDesiredPayAnnual = self.tfWhatisYourDesiredpayAnnual.text!
         objAppShareData.UserDetail.strSelectedDesiredVaccation = self.tfDesiredVaccation.text!
+        
+        print(objAppShareData.UserDetail)
     }
     
     //MARK: - Fetch Saved Localy data
@@ -479,7 +481,12 @@ extension DesiredJobViewController{
                 
                 for data in arrResult{
                     let obj = DesiredFieldModel.init(dict: data)
-                    self.tfDesiredField.optionArray.append(obj.strDesiredName ?? "")
+                    if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                        self.tfDesiredField.optionArray.append(obj.strDesiredName ?? "")
+                    }else{
+                        self.tfDesiredField.optionArray.append(obj.strDesiredNameFr ?? "")
+                    }
+                   
                     self.arrDesiredFieldID.append(obj.strDesiredID ?? 0)
                 }
                 self.tfDesiredField.optionIds = self.arrDesiredFieldID
@@ -506,7 +513,8 @@ extension DesiredJobViewController{
         
         objWebServiceManager.showIndicator()
         
-        let dictParam = ["desired_id":strDesiredID] as [String:Any]
+        let dictParam = ["desired_id":strDesiredID,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage] as [String:Any]
         
         objWebServiceManager.requestPost(strURL: WsUrl.url_getDesiredPosition, queryParams: [:], params: dictParam, strCustomValidation: "", showIndicator: false) { response in
             
@@ -525,13 +533,24 @@ extension DesiredJobViewController{
                 
                 for data in arrResult{
                     let obj = DesiredFieldModel.init(dict: data)
-                    self.tfDesiredFieldPosition.optionArray.append(obj.strDesiredPositionName ?? "")
+                    if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                        self.tfDesiredFieldPosition.optionArray.append(obj.strDesiredPositionName ?? "")
+                    }else{
+                        self.tfDesiredFieldPosition.optionArray.append(obj.strDesiredPositionNameFr ?? "")
+                    }
+                    
                     self.arrDesiredFieldPositionID.append(obj.strDesiredPositionID ?? 0)
                     
                     if objAppShareData.isComingFromEdit{
                         var str = String(obj.strDesiredPositionID ?? 0)
                         if str == objAppShareData.UserDetail.strSelectedDesiredFieldPositionID{
-                            self.tfDesiredFieldPosition.text = obj.strDesiredPositionName
+                            
+                          //  self.tfDesiredFieldPosition.text = obj.strDesiredPositionName
+                            if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                                self.tfDesiredFieldPosition.optionArray.append(obj.strDesiredPositionName ?? "")
+                            }else{
+                                self.tfDesiredFieldPosition.optionArray.append(obj.strDesiredPositionNameFr ?? "")
+                            }
                             self.selectedDesiredPositionFieldID = objAppShareData.UserDetail.strSelectedDesiredFieldPositionID
                         }
                         

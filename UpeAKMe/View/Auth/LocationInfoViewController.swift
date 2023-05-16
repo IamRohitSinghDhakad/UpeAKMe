@@ -181,7 +181,7 @@ extension LocationInfoViewController{
         }
         if let desiredCity = objAppShareData.UserDetail.strSelectedDesiredCity as String?{
             if desiredCity == ""{
-                self.lblDesiredCity.text! = "Desired City"
+                self.lblDesiredCity.text! = "Desired City".localized()
             }else{
                 self.lblDesiredCity.text! = desiredCity
                 self.selectedIndexCity = objAppShareData.UserDetail.strSelectedDesiredCityID
@@ -208,7 +208,9 @@ extension LocationInfoViewController{
         
         objWebServiceManager.showIndicator()
         
-        objWebServiceManager.requestPost(strURL: WsUrl.url_GetNation, queryParams: [:], params: [:], strCustomValidation: "", showIndicator: false) { response in
+        let dictParam = ["language":objAppShareData.UserDetail.strSelectedLanguage] as [String:Any]
+        
+        objWebServiceManager.requestPost(strURL: WsUrl.url_GetNation, queryParams: [:], params: dictParam, strCustomValidation: "", showIndicator: false) { response in
             
             objWebServiceManager.hideIndicator()
             
@@ -220,7 +222,12 @@ extension LocationInfoViewController{
                     
                     for data in user_details{
                         let obj = NationModel.init(dict: data)
-                        self.tfDesiredCountry.optionArray.append(obj.strName)
+                        if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                            self.tfDesiredCountry.optionArray.append(obj.strName)
+                        }else{
+                            self.tfDesiredCountry.optionArray.append(obj.strNameFr)
+                        }
+                        
                         self.arrDesiredCountryID.append(obj.strID)
                     }
                     self.tfDesiredCountry.optionIds = self.arrDesiredCountryID
@@ -255,7 +262,8 @@ extension LocationInfoViewController{
         
         objWebServiceManager.showIndicator()
         
-        let dictParam = ["nation_id":strNationID] as [String:Any]
+        let dictParam = ["nation_id":strNationID,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage] as [String:Any]
         
         print(dictParam)
         
@@ -273,7 +281,12 @@ extension LocationInfoViewController{
                     self.arrDesiredProvienceID.removeAll()
                     for data in user_details{
                         let obj = ProvienceModel.init(dict: data)
-                        self.tfDesiredProvince.optionArray.append(obj.strName)
+                       // self.tfDesiredProvince.optionArray.append(obj.strName)
+                        if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                            self.tfDesiredProvince.optionArray.append(obj.strName)
+                        }else{
+                            self.tfDesiredProvince.optionArray.append(obj.strNameFr)
+                        }
                         self.arrDesiredProvienceID.append(obj.strID)
                     }
                     self.tfDesiredProvince.optionIds = self.arrDesiredProvienceID
@@ -312,7 +325,8 @@ extension LocationInfoViewController{
         objWebServiceManager.showIndicator()
         
         let dictParam = [
-                         "province_id":strProvience] as [String:Any]
+                         "province_id":strProvience,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage] as [String:Any]
         print(dictParam)
         
         objWebServiceManager.requestPost(strURL: WsUrl.url_getMunicipality, queryParams: [:], params: dictParam, strCustomValidation: "", showIndicator: false) { response in

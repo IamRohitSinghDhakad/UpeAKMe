@@ -8,7 +8,7 @@
 import UIKit
 
 class RecapViewController: UIViewController {
-
+    
     @IBOutlet var lblFirstName: UILabel!
     @IBOutlet var lblLastName: UILabel!
     @IBOutlet var lblPhoneNumber: UILabel!
@@ -38,7 +38,7 @@ class RecapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -142,81 +142,83 @@ extension RecapViewController{
             uri = WsUrl.url_completeProfile
             
             dictParam = ["user_id":objAppShareData.UserDetail.strUserId,
-                "first_name":self.lblFirstName.text!,
-                             "last_name":self.lblLastName.text!,
-                             "name":lblFirstName.text! + lblLastName.text!,
-                             "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
-                             "email":lblEmail.text!,
-                             "password":objAppShareData.UserDetail.strPassword,
-                             "address":"",
-                             "lat":"",
-                             "lng":"",
-                             "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
-                             "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
-                             "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID, 
-                             "device_type":"IOS",
-                             "desired_field":self.lblDesiredField.text!,
-                             "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID, //need to send ID
-                             "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
-                             "job_type":self.lblJobType.text!,
-                             "desired_work":self.lbldesiredWorkSetting.text!,
-                             "work_shedule":self.lblWorkSchedule.text!,
-                             "desired_annual_pay":self.lblDesiredPayAnnual.text!,
-                             "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
-                             "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
-                             "job_tittle":self.lblJobTitle.text!,
-                             "company_name":self.lblCompanyName.text!,
-                             "job_location":self.lblJobLocation.text!,
-                             "job_duration":self.lblJobDuration.text!,
-                             "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1 + "," + objAppShareData.UserDetail.strCurrentlyWorkingHere2,
-                             "level_education":self.lblLevelEducation.text!,
-                             "certificate_tbd":self.lblCertificate.text!,
-                             "edu_skill":objAppShareData.UserDetail.strSkills,
-                             "spoken_language":self.lblSpokenLanguage.text!,
-                             "written_language":self.lblWrittenLanguage.text!,
-                             "desired_values":self.lblSignLanguage.text!,
-                             "volunteer_work":self.lblVolunteerWork.text!,
-                             "register_id":""
+                         "first_name":self.lblFirstName.text!,
+                         "last_name":self.lblLastName.text!,
+                         "name":lblFirstName.text! + lblLastName.text!,
+                         "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
+                         "email":lblEmail.text!,
+                         "password":objAppShareData.UserDetail.strPassword,
+                         "address":"",
+                         "lat":"",
+                         "lng":"",
+                         "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
+                         "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
+                         "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID,
+                         "device_type":"IOS",
+                         "desired_field":self.lblDesiredField.text!,
+                         "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID, //need to send ID
+                         "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
+                         "job_type":self.lblJobType.text!,
+                         "desired_work":self.lbldesiredWorkSetting.text!,
+                         "work_shedule":self.lblWorkSchedule.text!,
+                         "desired_annual_pay":self.lblDesiredPayAnnual.text!,
+                         "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
+                         "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
+                         "job_tittle":self.lblJobTitle.text!,
+                         "company_name":self.lblCompanyName.text!,
+                         "job_location":self.lblJobLocation.text!,
+                         "job_duration":self.lblJobDuration.text!,
+                         "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1 + "," + objAppShareData.UserDetail.strCurrentlyWorkingHere2,
+                         "level_education":self.lblLevelEducation.text!,
+                         "certificate_tbd":self.lblCertificate.text!,
+                         "edu_skill":objAppShareData.UserDetail.strSkills,
+                         "spoken_language":self.lblSpokenLanguage.text!,
+                         "written_language":self.lblWrittenLanguage.text!,
+                         "desired_values":self.lblSignLanguage.text!,
+                         "volunteer_work":self.lblVolunteerWork.text!,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage,
+                         "register_id":""
             ]as [String:Any]
             
         }else{
             uri = WsUrl.url_SignUp
             
             dictParam = ["first_name":self.lblFirstName.text!,
-                             "last_name":self.lblLastName.text!,
-                             "name":lblFirstName.text! + lblLastName.text!,
-                             "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
-                             "email":lblEmail.text!,
-                             "password":objAppShareData.UserDetail.strPassword,
-                             "address":"",
-                             "lat":"",
-                             "lng":"",
-                             "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
-                             "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
-                             "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID,
-                             "device_type":"IOS",
-                             "desired_field":self.lblDesiredField.text!,
-                             "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID,
-                             "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
-                             "job_type":self.lblJobType.text!,
-                             "desired_work":self.lbldesiredWorkSetting.text!,
-                             "work_shedule":self.lblWorkSchedule.text!,
-                             "desired_annual_pay":self.lblDesiredPayAnnual.text!,
-                             "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
-                             "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
-                             "job_tittle":self.lblJobTitle.text!,
-                             "company_name":self.lblCompanyName.text!,
-                             "job_location":self.lblJobLocation.text!,
-                             "job_duration":self.lblJobDuration.text!,
-                             "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1,
-                             "level_education":self.lblLevelEducation.text!,
-                             "certificate_tbd":self.lblCertificate.text!,
-                             "edu_skill":objAppShareData.UserDetail.strSkills,
-                             "spoken_language":self.lblSpokenLanguage.text!,
-                             "written_language":self.lblWrittenLanguage.text!,
-                             "desired_values":self.lblSignLanguage.text!,
-                             "volunteer_work":self.lblVolunteerWork.text!,
-                             "register_id":""
+                         "last_name":self.lblLastName.text!,
+                         "name":lblFirstName.text! + lblLastName.text!,
+                         "mobile":lblPhoneNumber.text!.withoutSpecialCharacters,
+                         "email":lblEmail.text!,
+                         "password":objAppShareData.UserDetail.strPassword,
+                         "address":"",
+                         "lat":"",
+                         "lng":"",
+                         "nation_id":objAppShareData.UserDetail.strSelectedDesiredCountryID,
+                         "province_id":objAppShareData.UserDetail.strSelectedDesiredProvienceID,
+                         "municipality_id":objAppShareData.UserDetail.strSelectedDesiredCityID,
+                         "device_type":"IOS",
+                         "desired_field":self.lblDesiredField.text!,
+                         "desired_id":objAppShareData.UserDetail.strSelectedDesiredFieldID,
+                         "desired_position_id":objAppShareData.UserDetail.strSelectedDesiredFieldPositionID,
+                         "job_type":self.lblJobType.text!,
+                         "desired_work":self.lbldesiredWorkSetting.text!,
+                         "work_shedule":self.lblWorkSchedule.text!,
+                         "desired_annual_pay":self.lblDesiredPayAnnual.text!,
+                         "relocation":objAppShareData.UserDetail.strSelectedDesiredRelocation,
+                         "desired_vacation":objAppShareData.UserDetail.strSelectedDesiredVaccation,
+                         "job_tittle":self.lblJobTitle.text!,
+                         "company_name":self.lblCompanyName.text!,
+                         "job_location":self.lblJobLocation.text!,
+                         "job_duration":self.lblJobDuration.text!,
+                         "job_working_status":objAppShareData.UserDetail.strCurrentlyWorkingHere1,
+                         "level_education":self.lblLevelEducation.text!,
+                         "certificate_tbd":self.lblCertificate.text!,
+                         "edu_skill":objAppShareData.UserDetail.strSkills,
+                         "spoken_language":self.lblSpokenLanguage.text!,
+                         "written_language":self.lblWrittenLanguage.text!,
+                         "desired_values":self.lblSignLanguage.text!,
+                         "volunteer_work":self.lblVolunteerWork.text!,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage,
+                         "register_id":""
             ]as [String:Any]
         }
         

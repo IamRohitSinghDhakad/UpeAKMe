@@ -124,10 +124,10 @@ class WorkExperienceViewController: UIViewController {
         let sliderValue = Int(sender.value)
         switch sender.tag {
         case 0:
-            self.lblDuration1.text = "Duration (\(sliderValue) Year)"
+            self.lblDuration1.text = "Duration".localized() +  " (\(sliderValue) " + "Year".localized() +  ")"
             self.strSliderValue1 = "\(sliderValue)"
         case 1:
-            self.lblDuration2.text = "Duration (\(sliderValue) Year)"
+            self.lblDuration2.text = "Duration".localized() +  " (\(sliderValue) " + "Year".localized() +  ")"
             self.strSliderValue2 = "\(sliderValue)"
         default:
             break
@@ -194,8 +194,8 @@ extension WorkExperienceViewController{
                 let x = durationValue1.split(separator: ",").first
                 let y = durationValue1.split(separator: ",").last
                 print(x!,y!)
-                self.lblDuration1.text = "Duration \(x ?? "0") Year"
-                self.lblDuration2.text = "Duration \(y ?? "0") Year"
+                self.lblDuration1.text = "Duration".localized() + " \(x ?? "0") " + "Year".localized()
+                self.lblDuration2.text = "Duration".localized() + " \(y ?? "0") " + "Year".localized()
                 self.sliderDuration1.value = Float(x ?? "0.0") ?? 0.0
                 self.sliderDuration2.value = Float(y ?? "0.0") ?? 0.0
                 self.strSliderValue1 = "\(x ?? "0")"

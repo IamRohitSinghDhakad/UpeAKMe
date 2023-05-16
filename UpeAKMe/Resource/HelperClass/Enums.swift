@@ -16,9 +16,9 @@ enum JobType{
 }
 
 enum WorkSetting{
-    static let strWFH = "work@home".localized()
-    static let strHybrid = "hybrid".localized()
-    static let strInOffice = "inOffice".localized()
+    static let strWFH = "Work@Home".localized()
+    static let strHybrid = "Hybrid".localized()
+    static let strInOffice = "In-Office".localized()
 }
 enum WorkSchedule{
     static let strDayTime = "Day Time".localized()

@@ -9,238 +9,373 @@
 "5Nc-ad-gri.placeholder" = "Poste de terrain souhaité";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "5aY-Q9-IHb"; */
-"5aY-Q9-IHb.placeholder" = "Email";
+"5aY-Q9-IHb.placeholder" = "Courriel";
 
 /* Class = "UILabel"; text = "Education"; ObjectID = "5cf-Pn-i1Y"; */
-"5cf-Pn-i1Y.text" = "Education";
+"5cf-Pn-i1Y.text" = "Éducation";
 
 /* Class = "UITextField"; placeholder = "Work Schedule"; ObjectID = "5nP-39-XTz"; */
-"5nP-39-XTz.placeholder" = "Work Schedule";
+"5nP-39-XTz.placeholder" = "Horaire de travail";
 
 /* Class = "UILabel"; text = "French"; ObjectID = "5us-nj-X8N"; */
-"5us-nj-X8N.text" = "French";
+"5us-nj-X8N.text" = "Français";
 
 /* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "7Gr-IA-7bC"; */
-"7Gr-IA-7bC.configuration.title" = "NEXT";
+"7Gr-IA-7bC.configuration.title" = "suivant";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Gr-IA-7bC"; */
-"7Gr-IA-7bC.normalTitle" = "Button";
+"7Gr-IA-7bC.normalTitle" = "suivant";
 
 /* Class = "UILabel"; text = "I'm currently working here"; ObjectID = "80o-8k-Y8u"; */
 "80o-8k-Y8u.text" = "I'm currently working here";
 
 /* Class = "UILabel"; text = "Sign In"; ObjectID = "9tu-cc-bnR"; */
-"9tu-cc-bnR.text" = "Sign In";
+"9tu-cc-bnR.text" = "Connexion";
 
 /* Class = "UITextField"; placeholder = "Desired Field"; ObjectID = "AXu-Nm-dPF"; */
-"AXu-Nm-dPF.placeholder" = "Desired Field";
+"AXu-Nm-dPF.placeholder" = "Champ d’emploi souhaiter";
 
 /* Class = "UITextField"; placeholder = "Desired Vacation"; ObjectID = "B0j-Tm-0Wm"; */
-"B0j-Tm-0Wm.placeholder" = "Desired Vacation";
+"B0j-Tm-0Wm.placeholder" = "Vacances souhaitées";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "Bam-QS-Xpg"; */
-"Bam-QS-Xpg.text" = "Yes";
+"Bam-QS-Xpg.text" = "Oui";
 
 /* Class = "UILabel"; text = "Contract-Internship"; ObjectID = "Bqf-XZ-Jek"; */
-"Bqf-XZ-Jek.text" = "Contract-Internship";
+"Bqf-XZ-Jek.text" = "Contrat-Stage";
 
 /* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "CPS-qL-nnw"; */
-"CPS-qL-nnw.placeholder" = "Phone Number";
+"CPS-qL-nnw.placeholder" = "Numéro de téléphone";
 
 /* Class = "UITextField"; placeholder = "Location"; ObjectID = "CaW-wz-R9k"; */
-"CaW-wz-R9k.placeholder" = "Location";
+"CaW-wz-R9k.placeholder" = "Emplacement";
 
 /* Class = "UILabel"; text = "I'm currently working here"; ObjectID = "EYr-nP-ddS"; */
-"EYr-nP-ddS.text" = "I'm currently working here";
+"EYr-nP-ddS.text" = "Je travaille actuellement ici";
 
 /* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "FOx-vu-CW9"; */
-"FOx-vu-CW9.configuration.title" = "NEXT";
+"FOx-vu-CW9.configuration.title" = "suivant";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FOx-vu-CW9"; */
-"FOx-vu-CW9.normalTitle" = "Button";
+"FOx-vu-CW9.normalTitle" = "suivant";
 
 /* Class = "UILabel"; text = "Forgot Password?"; ObjectID = "Hqw-7A-0Mr"; */
-"Hqw-7A-0Mr.text" = "Forgot Password?";
+"Hqw-7A-0Mr.text" = "Oublier mot de passe?";
 
 /* Class = "UILabel"; text = "Create Account"; ObjectID = "Iju-cH-rCY"; */
-"Iju-cH-rCY.text" = "Create Account";
+"Iju-cH-rCY.text" = "Créer compte";
 
 /* Class = "UILabel"; text = "What is your desired work setting?"; ObjectID = "JfU-gJ-xGD"; */
-"JfU-gJ-xGD.text" = "What is your desired work setting?";
+"JfU-gJ-xGD.text" = "Quel est votre emploi de travail souhaité ?";
 
 /* Class = "UIButton"; normalTitle = "  Forgot password ?  "; ObjectID = "MVj-8J-cNq"; */
-"MVj-8J-cNq.normalTitle" = "  Forgot password ?  ";
+"MVj-8J-cNq.normalTitle" = "  Oublier mot de passe ?  ";
 
 /* Class = "UITextField"; placeholder = "Location"; ObjectID = "ObU-5U-5SH"; */
-"ObU-5U-5SH.placeholder" = "Location";
+"ObU-5U-5SH.placeholder" = "Emplacement";
 
 /* Class = "UIButton"; configuration.title = "Reset Password"; ObjectID = "Rdh-6i-xat"; */
-"Rdh-6i-xat.configuration.title" = "Reset Password";
+"Rdh-6i-xat.configuration.title" = "  réinitialiser le mot de passe  ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Rdh-6i-xat"; */
-"Rdh-6i-xat.normalTitle" = "Button";
+"Rdh-6i-xat.normalTitle" = "  réinitialiser le mot de passe  ";
 
 /* Class = "UILabel"; text = "Work Experience"; ObjectID = "SSW-Qp-LlF"; */
-"SSW-Qp-LlF.text" = "Work Experience";
+"SSW-Qp-LlF.text" = "Expérience d\' emploi";
 
 /* Class = "UILabel"; text = "Desired Job"; ObjectID = "Usc-vO-hgb"; */
-"Usc-vO-hgb.text" = "Desired Job";
+"Usc-vO-hgb.text" = "Emploi désirer";
 
 /* Class = "UITextField"; placeholder = "What is your desired pay annual"; ObjectID = "V5r-zx-FbP"; */
-"V5r-zx-FbP.placeholder" = "What is your desired pay annual";
+"V5r-zx-FbP.placeholder" = "Quel est votre salaire annuelle souhaiter ?";
 
 /* Class = "UILabel"; text = "English"; ObjectID = "VcQ-h2-21f"; */
 "VcQ-h2-21f.text" = "Anglais";
 
 /* Class = "UITextField"; placeholder = "Job Title"; ObjectID = "WOt-Qm-TkW"; */
-"WOt-Qm-TkW.placeholder" = "Job Title";
+"WOt-Qm-TkW.placeholder" = "Tittre d\'emploi";
 
 /* Class = "UILabel"; text = "Location Info"; ObjectID = "X6R-X6-bdM"; */
-"X6R-X6-bdM.text" = "Location Info";
+"X6R-X6-bdM.text" = "Endroit";
 
 /* Class = "UILabel"; text = "Part Time"; ObjectID = "XZl-pD-Pka"; */
-"XZl-pD-Pka.text" = "Part Time";
+"XZl-pD-Pka.text" = "À temps partiel";
 
 /* Class = "UILabel"; text = "Duration (0 Year)"; ObjectID = "XlT-D7-2Qx"; */
-"XlT-D7-2Qx.text" = "Duration (0 Year)";
+"XlT-D7-2Qx.text" = "Durée (0 ans)";
 
 /* Class = "UITextField"; placeholder = "Desired City"; ObjectID = "YOt-xJ-K2w"; */
-"YOt-xJ-K2w.placeholder" = "Desired City";
+"YOt-xJ-K2w.placeholder" = "Ville souhaitée";
 
 /* Class = "UILabel"; text = "Work Experience 1"; ObjectID = "YZc-fQ-PGC"; */
-"YZc-fQ-PGC.text" = "Work Experience 1";
+"YZc-fQ-PGC.text" = "Expérience d\' emploi 1";
 
 /* Class = "UITextField"; placeholder = "Desired Country"; ObjectID = "Yp0-Lf-yfW"; */
-"Yp0-Lf-yfW.placeholder" = "Desired Country";
+"Yp0-Lf-yfW.placeholder" = "Pays souhaité";
 
 /* Class = "UILabel"; text = "Work@Home"; ObjectID = "aSx-LL-dRl"; */
-"aSx-LL-dRl.text" = "Work@Home";
+"aSx-LL-dRl.text" = "Travail à la maison";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "adX-YM-4PG"; */
-"adX-YM-4PG.placeholder" = "Email";
+"adX-YM-4PG.placeholder" = "Courriel";
 
 /* Class = "UILabel"; text = "Duration (0 Year)"; ObjectID = "aqj-j4-KXJ"; */
-"aqj-j4-KXJ.text" = "Duration (0 Year)";
+"aqj-j4-KXJ.text" = "Durée (0 ans)";
 
 /* Class = "UITextField"; placeholder = "Job Title"; ObjectID = "azu-he-kmY"; */
-"azu-he-kmY.placeholder" = "Job Title";
+"azu-he-kmY.placeholder" = "Tittre d\'emploi";
 
 /* Class = "UITextField"; placeholder = "Certificate/License TBD"; ObjectID = "bDe-gS-3cv"; */
 "bDe-gS-3cv.placeholder" = "Certificate/License TBD";
 
 /* Class = "UILabel"; text = "Job Type"; ObjectID = "bFC-U5-9AV"; */
-"bFC-U5-9AV.text" = "Job Type";
+"bFC-U5-9AV.text" = "Type d\'emploi";
 
 /* Class = "UILabel"; text = "In-Office"; ObjectID = "bMD-Rf-lwf"; */
-"bMD-Rf-lwf.text" = "In-Office";
+"bMD-Rf-lwf.text" = "Au bureau";
 
 /* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "c8A-h0-zI3"; */
-"c8A-h0-zI3.configuration.title" = "Sign In";
+"c8A-h0-zI3.configuration.title" = "Connexion";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c8A-h0-zI3"; */
-"c8A-h0-zI3.normalTitle" = "Button";
+"c8A-h0-zI3.normalTitle" = "Connexion";
 
 /* Class = "UITextField"; placeholder = "Written Language"; ObjectID = "cg1-rZ-aBY"; */
-"cg1-rZ-aBY.placeholder" = "Written Language";
+"cg1-rZ-aBY.placeholder" = "Langue écrite";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "ckg-7k-rgS"; */
-"ckg-7k-rgS.placeholder" = "Email";
+"ckg-7k-rgS.placeholder" = "Courriel";
 
 /* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "dWf-PR-9SK"; */
-"dWf-PR-9SK.configuration.title" = "NEXT";
+"dWf-PR-9SK.configuration.title" = "suivant";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dWf-PR-9SK"; */
-"dWf-PR-9SK.normalTitle" = "Button";
+"dWf-PR-9SK.normalTitle" = "suivant";
 
 /* Class = "UITextField"; placeholder = "Desired Province"; ObjectID = "dkz-fS-fSn"; */
-"dkz-fS-fSn.placeholder" = "Desired Province";
+"dkz-fS-fSn.placeholder" = "Etat souhaité";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "e4K-RJ-h5C"; */
-"e4K-RJ-h5C.text" = "Yes";
+"e4K-RJ-h5C.text" = "Oui";
 
 /* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "fEf-EH-bWX"; */
-"fEf-EH-bWX.placeholder" = "Last Name";
+"fEf-EH-bWX.placeholder" = "Nom de famille";
 
 /* Class = "UITextField"; placeholder = "First Name"; ObjectID = "fHh-lh-Pri"; */
-"fHh-lh-Pri.placeholder" = "First Name";
+"fHh-lh-Pri.placeholder" = "Votre prénom";
 
 /* Class = "UILabel"; text = "No"; ObjectID = "fP7-NQ-z83"; */
-"fP7-NQ-z83.text" = "No";
+"fP7-NQ-z83.text" = "Non";
 
 /* Class = "UITextField"; placeholder = "Spoken Language"; ObjectID = "fyX-ar-PXk"; */
-"fyX-ar-PXk.placeholder" = "Spoken Language";
+"fyX-ar-PXk.placeholder" = "Langue parlée";
 
 /* Class = "UITextField"; placeholder = "Company Name"; ObjectID = "hwS-Rg-TIR"; */
-"hwS-Rg-TIR.placeholder" = "Company Name";
+"hwS-Rg-TIR.placeholder" = "Nom de l\' entreprise";
+
+/* Class = "UITextField"; placeholder = "Level Education"; ObjectID = "0Iq-3Z-RNx"; */
+"0Iq-3Z-RNx.placeholder" = "Niveau d\'éducation";
 
 /* Class = "UITextField"; placeholder = "Level Education"; ObjectID = "jD6-ny-lDe"; */
-"jD6-ny-lDe.placeholder" = "Level Education";
+"jD6-ny-lDe.placeholder" = "Niveau d\'éducation";
 
 /* Class = "UILabel"; text = "Full Time"; ObjectID = "jGn-7i-5TR"; */
-"jGn-7i-5TR.text" = "Full Time";
+"jGn-7i-5TR.text" = "À temps plein";
 
 /* Class = "UILabel"; text = "Yes"; ObjectID = "jrn-id-NrB"; */
-"jrn-id-NrB.text" = "Yes";
+"jrn-id-NrB.text" = "Oui";
 
 /* Class = "UILabel"; text = "No"; ObjectID = "khg-Sk-eBT"; */
-"khg-Sk-eBT.text" = "No";
+"khg-Sk-eBT.text" = "Non";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "lti-Nn-Wj9"; */
-"lti-Nn-Wj9.placeholder" = "Password";
+"lti-Nn-Wj9.placeholder" = "Mot de passe";
 
 /* Class = "UILabel"; text = "Select Language"; ObjectID = "m4t-Mh-WZ8"; */
-"m4t-Mh-WZ8.text" = "Choisir la langue";
+"m4t-Mh-WZ8.text" = "Sélectionner la langue";
 
 /* Class = "UITextField"; placeholder = "Company Name"; ObjectID = "mK1-Xe-LgG"; */
-"mK1-Xe-LgG.placeholder" = "Company Name";
+"mK1-Xe-LgG.placeholder" = "Nom de l\' entreprise";
 
 /* Class = "UILabel"; text = "Relocation"; ObjectID = "p6p-do-nwS"; */
-"p6p-do-nwS.text" = "Relocation";
+"p6p-do-nwS.text" = "Relocalisation";
 
 /* Class = "UILabel"; text = "Hybrid"; ObjectID = "qDm-vK-5Yc"; */
-"qDm-vK-5Yc.text" = "Hybrid";
+"qDm-vK-5Yc.text" = "Hybride";
 
 /* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "sIc-2V-MwA"; */
-"sIc-2V-MwA.configuration.title" = "NEXT";
+"sIc-2V-MwA.configuration.title" = "suivant";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sIc-2V-MwA"; */
-"sIc-2V-MwA.normalTitle" = "Button";
+"sIc-2V-MwA.normalTitle" = "suivant";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "uWw-pA-XTL"; */
-"uWw-pA-XTL.placeholder" = "Password";
+"uWw-pA-XTL.placeholder" = "Mot de passe";
 
 /* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "vBN-RZ-LKb"; */
-"vBN-RZ-LKb.configuration.title" = "NEXT";
+"vBN-RZ-LKb.configuration.title" = "suivant";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vBN-RZ-LKb"; */
-"vBN-RZ-LKb.normalTitle" = "Button";
+"vBN-RZ-LKb.normalTitle" = "suivant";
 
 /* Class = "UIButton"; configuration.title = "SELECT"; ObjectID = "wh4-bQ-3UT"; */
-"wh4-bQ-3UT.configuration.title" = "SELECT";
+"wh4-bQ-3UT.configuration.title" = "Sélectionner";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wh4-bQ-3UT"; */
-"wh4-bQ-3UT.normalTitle" = "Button";
+"wh4-bQ-3UT.normalTitle" = "Sélectionner";
 
 /* Class = "UIButton"; configuration.title = "JOIN US"; ObjectID = "wre-J9-I01"; */
-"wre-J9-I01.configuration.title" = "JOIN US";
+"wre-J9-I01.configuration.title" = "  Enregistrer  ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wre-J9-I01"; */
-"wre-J9-I01.normalTitle" = "Button";
+"wre-J9-I01.normalTitle" = "  Enregistrer  ";
 
 /* Class = "UILabel"; text = "Work Experience 2"; ObjectID = "xAa-OD-cOw"; */
-"xAa-OD-cOw.text" = "Work Experience 2";
+"xAa-OD-cOw.text" = "Expérience d\' emploi 2";
 
 /* Class = "UILabel"; text = "Full Time"; ObjectID = "xqA-WM-Eje"; */
-"xqA-WM-Eje.text" = "Full Time";
+"xqA-WM-Eje.text" = "À temps plein";
 
 /* Class = "UILabel"; text = "Enter your email address to reset your password"; ObjectID = "z1h-ao-Xag"; */
-"z1h-ao-Xag.text" = "Enter your email address to reset your password";
+"z1h-ao-Xag.text" = "Entrer votre courriel pour réinitialiser le mot de passe";
 
 /* Class = "UIButton"; configuration.title = "Go Back"; ObjectID = "z67-Hb-NFx"; */
-"z67-Hb-NFx.configuration.title" = "Go Back";
+"z67-Hb-NFx.configuration.title" = "  Retourner  ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "z67-Hb-NFx"; */
-"z67-Hb-NFx.normalTitle" = "Button";
+"z67-Hb-NFx.normalTitle" = "  Retourner  ";
 
 /* Class = "UILabel"; text = "Volunteer work and causes your support"; ObjectID = "zpv-O0-CJa"; */
-"zpv-O0-CJa.text" = "Volunteer work and causes your support";
+"zpv-O0-CJa.text" = "Bénévolat et causes que vous soutenez";
+
+/* Class = "UILabel"; text = "Work Schedule"; ObjectID = "E8x-bO-6O3"; */
+"E8x-bO-6O3.text" = "Horaire de travail";
+
+/* Class = "UILabel"; text = "Day Time"; ObjectID = "TcC-eb-bhf"; */
+"TcC-eb-bhf.text" = "jour";
+
+/* Class = "UILabel"; text = "Work Schedule"; ObjectID = "E8x-bO-6O3"; */
+"7JF-Lu-0cX.text" = "Soir";
+
+/* Class = "UILabel"; text = "Work Schedule"; ObjectID = "E8x-bO-6O3"; */
+"hAp-KY-tMH.text" = "Lundi-Samedi";
+
+/* Class = "UILabel"; text = "Work Schedule"; ObjectID = "E8x-bO-6O3"; */
+"3qY-au-3rn.text" = "Lundi-Vendredi";
+
+/* Class = "UILabel"; text = "Work Schedule"; ObjectID = "E8x-bO-6O3"; */
+"7mb-Xa-Z9e.text" = "autre";
+
+/* Class = "UILabel"; text = "Desired City"; ObjectID = "HNn-8w-Ypz"; */
+"HNn-8w-Ypz.text" = "Ville souhaitée";
+
+/* Class = "UILabel"; text = "Relocation"; ObjectID = "eO0-lC-rrq"; */
+"eO0-lC-rrq.text" = "Relocalisation";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "x8y-aE-rqS"; */
+"x8y-aE-rqS.text" = "Oui";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "yHf-AJ-dpw"; */
+"yHf-AJ-dpw.text" = "Non";
+
+/* Class = "UILabel"; text = "Recap"; ObjectID = "H9F-L5-E7C"; */
+"H9F-L5-E7C.text" = "Résumer";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "ho2-Xr-L5d"; */
+"ho2-Xr-L5d.text" = "Votre prénom";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "lXz-56-Vtu"; */
+"lXz-56-Vtu.text" = "Nom de famille";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "BTo-7L-nzF"; */
+"BTo-7L-nzF.text" = "Numéro de téléphone";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "wgf-Ih-YfG"; */
+"wgf-Ih-YfG.text" = "Courriel";
+
+/* Class = "UILabel"; text = "Desired Field"; ObjectID = "5XD-gZ-hSH"; */
+"5XD-gZ-hSH.text" = "Champ d’emploi souhaiter";
+
+/* Class = "UILabel"; text = "Job Type"; ObjectID = "7sS-Zt-z8X"; */
+"7sS-Zt-z8X.text" = "Type d\'emploi";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "gH8-EY-sPX"; */
+"gH8-EY-sPX.text" = "Quel est votre emploi de travail souhaité";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Deu-af-K1p"; */
+"Deu-af-K1p.text" = "Quel est votre salaire annuelle souhaiter";
+
+/* Class = "UILabel"; text = "Work Schedulw"; ObjectID = "FhX-ov-o13"; */
+"FhX-ov-o13.text" = "Horaire de travail";
+
+/* Class = "UILabel"; text = "Relocation"; ObjectID = "kHp-7u-e7u"; */
+"kHp-7u-e7u.text" = "Relocalisation";
+
+/* Class = "UILabel"; text = "Desired Country"; ObjectID = "517-JQ-TXp"; */
+"517-JQ-TXp.text" = "Pays souhaité";
+
+/* Class = "UILabel"; text = "Desired State"; ObjectID = "Jj6-s7-qxU"; */
+"Jj6-s7-qxU.text" = "État souhaité";
+
+/* Class = "UILabel"; text = "Desired City"; ObjectID = "NY8-ex-JeL"; */
+"NY8-ex-JeL.text" = "Ville souhaitée";
+
+/* Class = "UILabel"; text = "Desired Vacation"; ObjectID = "EBI-2j-Rzj"; */
+"EBI-2j-Rzj.text" = "Vacances souhaitées";
+
+/* Class = "UILabel"; text = "Job title"; ObjectID = "i3v-dW-xJn"; */
+"i3v-dW-xJn.text" = "Tittre d\'emploi";
+
+/* Class = "UILabel"; text = "Company Name"; ObjectID = "HTR-fo-rT0"; */
+"HTR-fo-rT0.text" = "Nom de l\' entreprise";
+
+/* Class = "UILabel"; text = "Job Location"; ObjectID = "nbe-IL-Wpr"; */
+"nbe-IL-Wpr.text" = "Lieu de travail";
+
+/* Class = "UILabel"; text = "Job duration"; ObjectID = "FgF-uq-k3v"; */
+"FgF-uq-k3v.text" = "Durée du travail";
+
+/* Class = "UILabel"; text = "Level Certificate Licanece"; ObjectID = "toH-Fp-yYN"; */
+"toH-Fp-yYN.text" = "Certificat /Licence";
+
+/* Class = "UILabel"; text = "Skills"; ObjectID = "SSr-2q-iEz"; */
+"SSr-2q-iEz.text" = "Compétences";
+
+/* Class = "UILabel"; text = "Spoken Language"; ObjectID = "q65-b7-oab"; */
+"q65-b7-oab.text" = "Langue parlée";
+
+/* Class = "UILabel"; text = "Written Language"; ObjectID = "28P-Ag-mFr"; */
+"28P-Ag-mFr.text" = "Langue écrite";
+
+/* Class = "UILabel"; text = "Desired value at work"; ObjectID = "tTy-0q-TLz"; */
+"tTy-0q-TLz.text" = "Valeurs souhaitées au travail";
+
+/* Class = "UILabel"; text = "Volunteer work"; ObjectID = "3FQ-jA-Jnj"; */
+"3FQ-jA-Jnj.text" = "Bénévolat et causes que vous soutenez";
+
+/* Class = "UIButton"; configuration.title = "NEXT"; ObjectID = "0gA-Qn-lxu"; */
+"0gA-Qn-lxu.configuration.title" = "Soumettre";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0gA-Qn-lxu"; */
+"0gA-Qn-lxu.normalTitle" = "Soumettre";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0gA-Qn-lxu"; */
+"HYh-SR-XwX.placeholder" = "Écrire ici";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "0gA-Qn-lxu"; */
+"gQQ-Fx-8ed.configuration.title" = "Fait";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "0gA-Qn-lxu"; */
+"gQQ-Fx-8ed.normalTitle" = "Fait";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "80t-oz-yCf"; */
+"80t-oz-yCf.placeholder" = "Recherche..";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "W5G-Mr-Scq"; */
+"W5G-Mr-Scq.configuration.title" = "suivant";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W5G-Mr-Scq"; */
+"W5G-Mr-Scq.normalTitle" = "suivant";
+
+
+

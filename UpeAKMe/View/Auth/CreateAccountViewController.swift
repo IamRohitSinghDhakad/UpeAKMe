@@ -98,22 +98,22 @@ extension CreateAccountViewController{
         self.tfPhoneNumber.text = self.tfPhoneNumber.text!.trim()
         
       if (tfFirstName.text?.isEmpty)! {
-          objAlert.showAlert(message: MessageConstant.BlankFirstName, title:MessageConstant.k_AlertTitle, controller: self)
+          objAlert.showAlert(message: MessageConstant.BlankFirstName.localized(), title:MessageConstant.k_AlertTitle, controller: self)
         }
         else if (tfLastName.text?.isEmpty)! {
-            objAlert.showAlert(message: MessageConstant.BlankLastName, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.BlankLastName.localized(), title:MessageConstant.k_AlertTitle, controller: self)
           }
         else if (tfPhoneNumber.text?.isEmpty)! {
-              objAlert.showAlert(message: MessageConstant.BlankPhoneNo, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.BlankPhoneNo.localized(), title:MessageConstant.k_AlertTitle, controller: self)
           }
         else if (tfEmail.text?.isEmpty)! {
-            objAlert.showAlert(message: MessageConstant.BlankEmail, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.BlankEmail.localized(), title:MessageConstant.k_AlertTitle, controller: self)
         }else if !objValidationManager.validateEmail(with: tfEmail.text!){
-            objAlert.showAlert(message: MessageConstant.ValidEmail, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.ValidEmail.localized(), title:MessageConstant.k_AlertTitle, controller: self)
         }else if (tfPassword.text?.isEmpty)! {
-            objAlert.showAlert(message: MessageConstant.BlankPassword, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.BlankPassword.localized(), title:MessageConstant.k_AlertTitle, controller: self)
         }else if !objValidationManager.isValidPassword6(testStr: self.tfPassword.text!){
-            objAlert.showAlert(message: MessageConstant.PWDMustContain, title:MessageConstant.k_AlertTitle, controller: self)
+            objAlert.showAlert(message: MessageConstant.PWDMustContain.localized(), title:MessageConstant.k_AlertTitle, controller: self)
         }
         else{
             
@@ -163,8 +163,6 @@ extension CreateAccountViewController{
 
 extension CreateAccountViewController{
     
-    
-    
     func call_wsCheckProfile(){
         
         self.view.endEditing(true)
@@ -176,7 +174,8 @@ extension CreateAccountViewController{
         
         objWebServiceManager.showIndicator()
         
-        let dictParam = ["email":self.tfEmail.text!]as [String:Any]
+        let dictParam = ["email":self.tfEmail.text!,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage]as [String:Any]
         
         debugPrint(dictParam)
         

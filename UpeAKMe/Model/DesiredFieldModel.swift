@@ -11,8 +11,10 @@ struct DesiredFieldModel {
     
     var strDesiredID:Int?
     var strDesiredName:String?
+    var strDesiredNameFr:String?
     var strDesiredPositionID:Int?
     var strDesiredPositionName:String?
+    var strDesiredPositionNameFr:String?
     var strStatus:String?
     
     init(dict : [String:Any]) {
@@ -27,6 +29,11 @@ struct DesiredFieldModel {
             self.strDesiredName = "\(desiredName)"
         }
         
+        if let desiredName = dict["desired_name_fr"]{
+            self.strDesiredNameFr = "\(desiredName)"
+        }
+        
+        
         if let desiredID = dict["desired_position_id"] as? String{
             self.strDesiredPositionID = Int(desiredID)
         }else if let desiredID = dict["desired_position_id"] as? Int{
@@ -35,6 +42,10 @@ struct DesiredFieldModel {
         
         if let desiredName = dict["desired_position_name"]{
             self.strDesiredPositionName = "\(desiredName)"
+        }
+        
+        if let desiredName = dict["desired_position_name_fr"]{
+            self.strDesiredPositionNameFr = "\(desiredName)"
         }
         
         if let status = dict["status"]{

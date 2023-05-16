@@ -10,6 +10,7 @@ import UIKit
 class NationModel: NSObject {
     
     var strName:String = ""
+    var strNameFr:String = ""
     var strID:Int = 0
     var isSelected:Bool?
     
@@ -18,6 +19,12 @@ class NationModel: NSObject {
         if let name = dict["name"] as? String{
             self.strName = name
         }
+        
+        if let name = dict["name_fr"] as? String{
+            self.strNameFr = name
+        }
+        
+        
         
         if let id = dict["id"] as? String{
             self.strID = Int(id) ?? 0
@@ -32,6 +39,7 @@ class ProvienceModel: NSObject {
     var strNationID:String = ""
     var strNationName:String = ""
     var strName:String = ""
+    var strNameFr:String = ""
     var strID:Int = 0
     var isSelected:Bool?
     
@@ -40,6 +48,11 @@ class ProvienceModel: NSObject {
         if let name = dict["name"] as? String{
             self.strName = name
         }
+        
+        if let name = dict["name_fr"] as? String{
+            self.strNameFr = name
+        }
+        
         
         if let id = dict["id"] as? String{
             self.strID = Int(id) ?? 0
@@ -54,6 +67,7 @@ class MuncipalModel: NSObject {
     
    
     var strName:String = ""
+    var strNameFr:String = ""
     var strID:Int = 0
     var isSelected = false
     
@@ -62,6 +76,11 @@ class MuncipalModel: NSObject {
         if let name = dict["name"] as? String{
             self.strName = name
         }
+        
+        if let name = dict["name_fr"] as? String{
+            self.strNameFr = name
+        }
+        
         
         if let id = dict["id"] as? String{
             self.strID = Int(id) ?? 0

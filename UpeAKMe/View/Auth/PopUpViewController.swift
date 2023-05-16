@@ -49,28 +49,25 @@ class PopUpViewController: UIViewController {
             self.arrayMuncipalOptionsFiltered = self.arrayMuncipalOptions
             self.tblVw.reloadData()
         case "Skill":
-            self.arrayOptions = ["Adaptability","Attention to detail","Collaboration","Communication","Computer skills","Conflict Management","Creativity","Critical thinking", "Delegating", "Empathy", "Integrity", "Leadership", "Negotiating skills", "Persuasion", "Presentation skills", "Problem - solving", "Reliability", "Social media skills", "Stress Management", "Task Management", "Team work", "Time management", "Tolerance", "Verbal skills", "Work ethic", "Writing skills"].map { SkillModel(name: $0, isSelected: false) }
+            self.arrayOptions = ["Adaptability".localized(), "Attention to detail".localized(), "Collaboration".localized(), "Communication".localized(), "Computer skills".localized(), "Conflict Management".localized(), "Creativity".localized(), "Critical thinking".localized(), "Delegating".localized(), "Empathy".localized(), "Integrity".localized(), "Leadership".localized(), "Negotiating skills".localized(), "Persuasion".localized(), "Presentation skills".localized(), "Problem - solving".localized(), "Reliability".localized(), "Social media skills".localized(), "Stress Management".localized(), "Task Management".localized(), "Team work".localized(), "Time management".localized(), "Tolerance".localized(), "Verbal skills".localized(), "Work ethic".localized(), "Writing skills".localized()].map { SkillModel(name: $0, isSelected: false) }
             self.arrayOptionsFiltered = self.arrayOptions
             self.tblVw.reloadData()
         case "SpokenLanguage":
-            self.arrSpokenLanguageArray = ["French", "English", "Spanish", "Italian", "Greek", "Chinese", "Japanese", "Arabic", "Other"].map { SkillModel(name: $0, isSelected: false) }
+            self.arrSpokenLanguageArray = ["French".localized(), "English".localized(), "Spanish".localized(), "Italian".localized(), "Greek".localized(), "Chinese".localized(), "Japanese".localized(), "Arabic".localized(), "Other".localized()].map { SkillModel(name: $0, isSelected: false) }
             self.arrSpokenLanguageArrayFiltered = self.arrSpokenLanguageArray
             self.tblVw.reloadData()
         case "WrittenLanguage":
-            self.arrWrittenLanguageArray = ["French", "English", "Spanish", "Italian", "Greek", "Chinese", "Japanese", "Arabic", "Other"].map { SkillModel(name: $0, isSelected: false) }
+            self.arrWrittenLanguageArray = ["French".localized(), "English".localized(), "Spanish".localized(), "Italian".localized(), "Greek".localized(), "Chinese".localized(), "Japanese".localized(), "Arabic".localized(), "Other".localized()].map { SkillModel(name: $0, isSelected: false) }
             self.arrWrittenLanguageArrayFiltered = self.arrWrittenLanguageArray
             self.tblVw.reloadData()
         case "Desired":
-            self.arrDesired = ["Accountability","Autonomy","Collaboration","Customer Focus","Diversity & Inclusion","Fairness","Family oriented","Flexibility Understanding","Fun","Growth Recognition","Honesty", "Innovation","Integrity","Learning","Loyalty","Passion","Promise to Customers","Quality","Respect","Teamwork","Transparency","Trust"].map { SkillModel(name: $0, isSelected: false) }
+            self.arrDesired = ["Accountability".localized(), "Autonomy".localized(), "Collaboration".localized(), "Customer Focus".localized(), "Diversity & Inclusion".localized(), "Fairness".localized(), "Family oriented".localized(), "Flexibility Understanding".localized(), "Fun".localized(), "Growth Recognition".localized(), "Honesty".localized(), "Innovation".localized(), "Integrity".localized(), "Learning".localized(), "Loyalty".localized(), "Passion".localized(), "Promise to Customers".localized(), "Quality".localized(), "Respect".localized(), "Teamwork".localized(), "Transparency".localized(), "Trust".localized()].map { SkillModel(name: $0, isSelected: false) }
             self.arrDesiredFiltered = self.arrDesired
             self.tblVw.reloadData()
         default:
             break
         }
-        
-       
-       
-       
+
         self.lblTitle.text = self.strTitle
         self.tfSearch.addTarget(self, action: #selector(searchContactAsPerText(_ :)), for: .editingChanged)
         self.tblVw.delegate = self
@@ -88,7 +85,11 @@ class PopUpViewController: UIViewController {
                 let filtered = self.arrayMuncipalOptionsFiltered.filter{ $0.isSelected == true }
                 if filtered.count != 0{
                     for i in 0...filtered.count-1{
-                        arrNames.append(filtered[i].strName)
+                        if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                            arrNames.append(filtered[i].strName)
+                        }else{
+                            arrNames.append(filtered[i].strNameFr)
+                        }
                         arrID.append(filtered[i].strID)
                     }
                     let name = arrNames.joined(separator: ",")
@@ -285,7 +286,11 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
         
         switch strIsComingFrom {
         case "City":
-            cell.lblTitle.text = self.arrayMuncipalOptionsFiltered[indexPath.row].strName
+            if LocalizationSystem.sharedInstance.getLanguage() == "en"{
+                cell.lblTitle.text = self.arrayMuncipalOptionsFiltered[indexPath.row].strName
+            }else{
+                cell.lblTitle.text = self.arrayMuncipalOptionsFiltered[indexPath.row].strNameFr
+            }
             if self.arrayMuncipalOptionsFiltered[indexPath.row].isSelected == true{
                 cell.vwBorder.borderColor = UIColor.init(named: "AppDefaultGolden")
                 cell.vwTick.isHidden = false
@@ -344,7 +349,7 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
             let arr = self.arrayMuncipalOptionsFiltered.filter{$0.isSelected == true}
             if obj.isSelected == false{
                 if arr.count > 4{
-                    objAlert.showAlert(message: "You can Select Max 5", title: MessageConstant.k_AlertTitle, controller: self)
+                    objAlert.showAlert(message: "You can Select Max 5".localized(), title: MessageConstant.k_AlertTitle, controller: self)
                 }else{
                     obj.isSelected = obj.isSelected == false ? true : false
                     self.tblVw.reloadData()
@@ -358,7 +363,7 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
             let arr = self.arrayOptionsFiltered.filter{$0.isSelected == true}
             if obj.isSelected == false{
                 if arr.count > 4{
-                    objAlert.showAlert(message: "You can Select Max 5", title: MessageConstant.k_AlertTitle, controller: self)
+                    objAlert.showAlert(message: "You can Select Max 5".localized(), title: MessageConstant.k_AlertTitle, controller: self)
                 }else{
                     obj.isSelected = obj.isSelected == false ? true : false
                     self.tblVw.reloadData()
@@ -372,7 +377,7 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
             let arr = self.arrSpokenLanguageArrayFiltered.filter{$0.isSelected == true}
             if obj.isSelected == false{
                 if arr.count > 4{
-                    objAlert.showAlert(message: "You can Select Max 5", title: MessageConstant.k_AlertTitle, controller: self)
+                    objAlert.showAlert(message: "You can Select Max 5".localized(), title: MessageConstant.k_AlertTitle, controller: self)
                 }else{
                     obj.isSelected = obj.isSelected == false ? true : false
                     self.tblVw.reloadData()
@@ -386,7 +391,7 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
             let arr = self.arrWrittenLanguageArrayFiltered.filter{$0.isSelected == true}
             if obj.isSelected == false{
                 if arr.count > 4{
-                    objAlert.showAlert(message: "You can Select Max 5", title: MessageConstant.k_AlertTitle, controller: self)
+                    objAlert.showAlert(message: "You can Select Max 5".localized(), title: MessageConstant.k_AlertTitle, controller: self)
                 }else{
                     obj.isSelected = obj.isSelected == false ? true : false
                     self.tblVw.reloadData()
@@ -400,7 +405,7 @@ extension PopUpViewController: UITableViewDelegate,UITableViewDataSource{
             let arr = self.arrDesiredFiltered.filter{$0.isSelected == true}
             if obj.isSelected == false{
                 if arr.count > 4{
-                    objAlert.showAlert(message: "You can Select Max 5", title: MessageConstant.k_AlertTitle, controller: self)
+                    objAlert.showAlert(message: "You can Select Max 5".localized(), title: MessageConstant.k_AlertTitle, controller: self)
                 }else{
                     obj.isSelected = obj.isSelected == false ? true : false
                     self.tblVw.reloadData()

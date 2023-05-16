@@ -21,7 +21,7 @@ class EducationViewController: UIViewController {
     
     //MARK: - Variables
     var strSelectedSkillID:String?
-    let  levelEducationArray: [String] = ["Level Education", "High school", "College", "Professional diploma", "Trade school", "University", "Bachelor's degree", "Master's degree", "Doctorate"]
+    let  levelEducationArray: [String] = ["Level Education".localized(), "High school".localized(), "College".localized(), "Professional diploma".localized(), "Trade school".localized(), "University".localized(), "Bachelor's degree".localized(), "Master's degree".localized(), "Doctorate".localized()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,7 +151,7 @@ extension EducationViewController{
         }
         if let skill = objAppShareData.UserDetail.strSkills as String?{
             if skill == ""{
-                self.lblSkill.text! = "Choose your best skills"
+                self.lblSkill.text! = "Choose your best skills".localized()
                 self.lblSkill.textColor = .lightGray
             }else{
                 self.lblSkill.text! = skill
@@ -160,7 +160,7 @@ extension EducationViewController{
         }
         if let desired = objAppShareData.UserDetail.strDesiredValue as String?{
             if desired == ""{
-                self.lblDesired.text! = "Desired Values@Work"
+                self.lblDesired.text! = "Desired Values@Work".localized()
                 self.lblDesired.textColor = .lightGray
             }else{
                 self.lblDesired.text! = desired
@@ -169,7 +169,7 @@ extension EducationViewController{
         }
         if let spokenLanguage = objAppShareData.UserDetail.strSpokenLanguage as String?{
             if spokenLanguage == ""{
-                self.lblSpokenLanguage.text! = "Spoken Language"
+                self.lblSpokenLanguage.text! = "Spoken Language".localized()
             }else{
                 self.lblSpokenLanguage.text! = spokenLanguage
             }
@@ -177,7 +177,7 @@ extension EducationViewController{
         }
         if let writtenLanguage = objAppShareData.UserDetail.strWrittenLanguage as String?{
             if writtenLanguage == ""{
-                self.lblWrittenLanguage.text! = "Written Language"
+                self.lblWrittenLanguage.text! = "Written Language".localized()
             }else{
                 self.lblWrittenLanguage.text! = writtenLanguage
             }

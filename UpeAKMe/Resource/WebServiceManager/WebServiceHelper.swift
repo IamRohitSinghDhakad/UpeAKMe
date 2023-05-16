@@ -28,6 +28,10 @@ struct WsUrl{
     static let url_GetUserList = BASE_URL + "get_users"
     static let url_GetProfile = BASE_URL + "get_profile"
     static let url_CheckEmail = BASE_URL + "check_profile"
+    static let url_getConversation = BASE_URL + "get_conversation"
+    static let url_clearConversastion = BASE_URL + "clear_conversation"
+    static let url_GetChat = BASE_URL + "get_chat"
+    static let url_InsertChat = BASE_URL + "insert_chat"
     static let url_Logout = BASE_URL + "logout"
 }
 //Api check for params

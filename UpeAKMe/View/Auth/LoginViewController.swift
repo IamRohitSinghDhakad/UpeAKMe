@@ -36,18 +36,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnOnSignIn(_ sender: Any) {
        // self.makeRootController()
-        self.call_WsLogin()
+   //     self.call_WsLogin()
       
-//        self.tfEmail.text = self.tfEmail.text?.trim()
-//        self.tfPassword.text = self.tfPassword.text?.trim()
-//
-//        if (self.tfEmail.text!.isEmpty){
-//            showToast(message: MessageConstant.BlankEmail, font: .systemFont(ofSize: 12))
-//        }else if (self.tfPassword.text!.isEmpty){
-//            showToast(message: MessageConstant.BlankPassword, font: .systemFont(ofSize: 12))
-//        }else{
-//            pushVc(viewConterlerId: "CreateAccountViewController")
-//        }
+        self.tfEmail.text = self.tfEmail.text?.trim()
+        self.tfPassword.text = self.tfPassword.text?.trim()
+
+        if (self.tfEmail.text!.isEmpty){
+            showToast(message: MessageConstant.BlankEmail.localized(), font: .systemFont(ofSize: 12))
+        }else if (self.tfPassword.text!.isEmpty){
+            showToast(message: MessageConstant.BlankPassword.localized(), font: .systemFont(ofSize: 12))
+        }else{
+            self.call_WsLogin()
+           // pushVc(viewConterlerId: "CreateAccountViewController")
+        }
         
     }
 }
@@ -70,6 +71,7 @@ extension LoginViewController{
         let dicrParam = ["email":self.tfEmail.text!,
                          "password":self.tfPassword.text!,
                          "register_id":"objAppShareData.strFirebaseToken",
+                         "language":objAppShareData.UserDetail.strSelectedLanguage,
                          "device_type":"IOS"
         ]as [String:Any]
         

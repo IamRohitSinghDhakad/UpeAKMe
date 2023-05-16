@@ -12,13 +12,13 @@
 "6KF-2J-3H1.text" = "  ";
 
 /* Class = "UILabel"; text = "Volunteer work and causes you support"; ObjectID = "6i1-6E-nWb"; */
-"6i1-6E-nWb.text" = "Bénévolat et cause que je supporte";
+"6i1-6E-nWb.text" = "Volunteer work and causes you support";
 
 /* Class = "UILabel"; text = "My Profile"; ObjectID = "81E-Ld-JU7"; */
-"81E-Ld-JU7.text" = "Mon profil";
+"81E-Ld-JU7.text" = "My Profile";
 
 /* Class = "UILabel"; text = "Job Duration"; ObjectID = "Acz-3M-ThO"; */
-"Acz-3M-ThO.text" = "Durée du travail";
+"Acz-3M-ThO.text" = "Job Duration";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "Btq-lx-B8K"; */
 "Btq-lx-B8K.text" = "  ";
@@ -30,13 +30,13 @@
 "CKu-UX-cEZ.text" = "Label";
 
 /* Class = "UILabel"; text = "Desired State"; ObjectID = "Cuc-bW-dge"; */
-"Cuc-bW-dge.text" = "État souhaité";
+"Cuc-bW-dge.text" = "Desired State";
 
 /* Class = "UILabel"; text = "Desired Country"; ObjectID = "DhH-gs-lkW"; */
-"DhH-gs-lkW.text" = "Pays souhaité";
+"DhH-gs-lkW.text" = "Desired Country";
 
 /* Class = "UILabel"; text = "Job Type"; ObjectID = "Dhw-A1-j5l"; */
-"Dhw-A1-j5l.text" = "Type d\'emploi";
+"Dhw-A1-j5l.text" = "Job Type";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "EHZ-cr-KU6"; */
 "EHZ-cr-KU6.text" = "  ";
@@ -51,19 +51,19 @@
 "J5m-RH-gGs.text" = "  ";
 
 /* Class = "UILabel"; text = "Relocation"; ObjectID = "Mmp-yb-9Gf"; */
-"Mmp-yb-9Gf.text" = "Relocalisation";
+"Mmp-yb-9Gf.text" = "Relocation";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Nun-Vt-xNT"; */
 "Nun-Vt-xNT.text" = "Label";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "OBy-x5-thy"; */
-"OBy-x5-thy.text" = "Courriel";
+"OBy-x5-thy.text" = "Email";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "OUd-Sd-OaV"; */
 "OUd-Sd-OaV.text" = "  ";
 
 /* Class = "UILabel"; text = "Skills"; ObjectID = "QlU-FB-yuR"; */
-"QlU-FB-yuR.text" = "Compétences";
+"QlU-FB-yuR.text" = "Skills";
 
 /* Class = "UILabel"; text = "Hello"; ObjectID = "S6p-vo-hCH"; */
 "S6p-vo-hCH.text" = "Hello";
@@ -72,43 +72,43 @@
 "S7d-Th-jB1.text" = "2 week ago";
 
 /* Class = "UILabel"; text = "Job Location"; ObjectID = "SZu-Lr-ktE"; */
-"SZu-Lr-ktE.text" = "Lieu de travail";
+"SZu-Lr-ktE.text" = "Job Location";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "T4C-3b-zOv"; */
 "T4C-3b-zOv.text" = "  ";
 
 /* Class = "UILabel"; text = "Level Education"; ObjectID = "TDc-5c-ZHT"; */
-"TDc-5c-ZHT.text" = "Niveau d\'éducation";
+"TDc-5c-ZHT.text" = "Level Education";
 
 /* Class = "UILabel"; text = "2 Month ago"; ObjectID = "VYP-dK-ksY"; */
 "VYP-dK-ksY.text" = "2 Month ago";
 
 /* Class = "UILabel"; text = "Company Name"; ObjectID = "WhB-hS-ljV"; */
-"WhB-hS-ljV.text" = "Nom de l\' entreprise";
+"WhB-hS-ljV.text" = "Company Name";
 
 /* Class = "UILabel"; text = "Written Language"; ObjectID = "WjH-nz-HBu"; */
-"WjH-nz-HBu.text" = "Langue écrite";
+"WjH-nz-HBu.text" = "Written Language";
 
 /* Class = "UILabel"; text = "Hey!! Welcome"; ObjectID = "Wwf-YX-tZX"; */
-"Wwf-YX-tZX.text" = "Hey ! Bienvenue!";
+"Wwf-YX-tZX.text" = "Hey!! Welcome";
 
 /* Class = "UILabel"; text = "Spoken Language"; ObjectID = "XuC-M0-C2o"; */
-"XuC-M0-C2o.text" = "Langue parlée";
+"XuC-M0-C2o.text" = "Spoken Language";
 
 /* Class = "UILabel"; text = "First Name"; ObjectID = "Yf1-Xy-llX"; */
-"Yf1-Xy-llX.text" = "Votre prénom";
+"Yf1-Xy-llX.text" = "First Name";
 
 /* Class = "UILabel"; text = "What is your desired work setting?"; ObjectID = "ZKs-vL-hQF"; */
-"ZKs-vL-hQF.text" = "Quel est votre emploi de travail souhaité ?";
+"ZKs-vL-hQF.text" = "What is your desired work setting?";
 
 /* Class = "UILabel"; text = "My Profile"; ObjectID = "Zqh-k7-duE"; */
-"Zqh-k7-duE.text" = "Mon profil";
+"Zqh-k7-duE.text" = "My Profile";
 
 /* Class = "UILabel"; text = "Hiiiii"; ObjectID = "ZrF-K8-HbD"; */
 "ZrF-K8-HbD.text" = "Hiiiii";
 
 /* Class = "UILabel"; text = "What is your desired pay annual"; ObjectID = "a3b-mP-PEn"; */
-"a3b-mP-PEn.text" = "Quel est votre salaire annuelle souhaiter ?";
+"a3b-mP-PEn.text" = "What is your desired pay annual";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "aRK-Yh-KvZ"; */
 "aRK-Yh-KvZ.text" = "  ";
@@ -126,19 +126,19 @@
 "ffa-Ax-Ek5.text" = "  ";
 
 /* Class = "UILabel"; text = "Phone Number"; ObjectID = "gUN-EW-Q4P"; */
-"gUN-EW-Q4P.text" = "Numéro de téléphone";
+"gUN-EW-Q4P.text" = "Phone Number";
 
 /* Class = "UILabel"; text = "Desired Values@Work"; ObjectID = "gba-al-hxh"; */
-"gba-al-hxh.text" = "Valeurs souhaitées au travail";
+"gba-al-hxh.text" = "Desired Values@Work";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "gu7-Z7-mPS"; */
 "gu7-Z7-mPS.text" = "  ";
 
 /* Class = "UILabel"; text = "Desired Vaccation"; ObjectID = "hjz-m4-L7C"; */
-"hjz-m4-L7C.text" = "Vacances souhaitées";
+"hjz-m4-L7C.text" = "Desired Vaccation";
 
 /* Class = "UILabel"; text = "Desired Field"; ObjectID = "icV-J8-SM7"; */
-"icV-J8-SM7.text" = "Champ d’emploi souhaiter";
+"icV-J8-SM7.text" = "Desired Field";
 
 /* Class = "UILabel"; text = "Rohit"; ObjectID = "izf-QA-pos"; */
 "izf-QA-pos.text" = "Rohit";
@@ -147,31 +147,31 @@
 "jqZ-F5-9kH.text" = "  ";
 
 /* Class = "UILabel"; text = " No"; ObjectID = "nTX-HB-QBh"; */
-"nTX-HB-QBh.text" = " Non";
+"nTX-HB-QBh.text" = " No";
 
 /* Class = "UILabel"; text = "Certificate/Licence TBD"; ObjectID = "nbA-qB-FFq"; */
-"nbA-qB-FFq.text" = "Certificat /Licence TBD";
+"nbA-qB-FFq.text" = "Certificate/Licence TBD";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "pY0-Ow-HiT"; */
 "pY0-Ow-HiT.text" = "  ";
 
 /* Class = "UILabel"; text = "Work Schedule"; ObjectID = "poj-Hq-u3C"; */
-"poj-Hq-u3C.text" = "Horaire de travail";
+"poj-Hq-u3C.text" = "Work Schedule";
 
 /* Class = "UIButton"; configuration.title = "EDIT"; ObjectID = "rZY-Z2-K5l"; */
-"rZY-Z2-K5l.configuration.title" = "Éditer le Profil";
+"rZY-Z2-K5l.configuration.title" = "EDIT";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rZY-Z2-K5l"; */
-"rZY-Z2-K5l.normalTitle" = "Éditer le Profil";
+"rZY-Z2-K5l.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Job Title"; ObjectID = "rh2-5S-DvJ"; */
-"rh2-5S-DvJ.text" = "Tittre d\'emploi";
+"rh2-5S-DvJ.text" = "Job Title";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "s0d-FD-b52"; */
 "s0d-FD-b52.text" = "  ";
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "tAN-6H-mFH"; */
-"tAN-6H-mFH.text" = "Nom de famille";
+"tAN-6H-mFH.text" = "Last Name";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "tyL-R1-OhN"; */
 "tyL-R1-OhN.text" = "Label";
@@ -189,7 +189,7 @@
 "z2X-Zm-2OR.text" = "  ";
 
 /* Class = "UILabel"; text = "Desired City"; ObjectID = "z5s-Ko-zeA"; */
-"z5s-Ko-zeA.text" = "Ville souhaitée";
+"z5s-Ko-zeA.text" = "Desired City";
 
 /* Class = "UILabel"; text = "  "; ObjectID = "z72-IB-oQG"; */
 "z72-IB-oQG.text" = "  ";

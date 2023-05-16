@@ -13,6 +13,8 @@
 		F906563328CDFADA00476D65 /* OptionsModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563228CDFADA00476D65 /* OptionsModelClass.swift */; };
 		F906563528CDFB5200476D65 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563428CDFB5200476D65 /* OptionsTableViewCell.swift */; };
 		F906563828CE5BAD00476D65 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906563728CE5BAD00476D65 /* MyProfileViewController.swift */; };
+		F9670A7929C0B16F003DD096 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9670A7829C0B16F003DD096 /* HomeTableViewCell.swift */; };
+		F9670A7B29C0DBBD003DD096 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9670A7A29C0DBBD003DD096 /* ChatModel.swift */; };
 		F9A5BAF528B0C8E000C2FFE2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF428B0C8E000C2FFE2 /* ForgotPasswordViewController.swift */; };
 		F9A5BAF728B0D60100C2FFE2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF628B0D60100C2FFE2 /* CreateAccountViewController.swift */; };
 		F9A5BAF928B0E28200C2FFE2 /* DesiredJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5BAF828B0E28200C2FFE2 /* DesiredJobViewController.swift */; };
@@ -52,6 +54,10 @@
 		F9BA022128B032BA002A9579 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA021228B032BA002A9579 /* SWRevealViewController.m */; };
 		F9BA022528B032E9002A9579 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA022328B032E9002A9579 /* WebServiceManager.swift */; };
 		F9BA022628B032E9002A9579 /* WebServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA022428B032E9002A9579 /* WebServiceHelper.swift */; };
+		F9C4A9FD29C198A800033121 /* ChatDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4A9FB29C198A800033121 /* ChatDeatilViewController.swift */; };
+		F9C4A9FE29C198A800033121 /* ChatDeatailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4A9FC29C198A800033121 /* ChatDeatailTableViewCell.swift */; };
+		F9C4AA0129C1990E00033121 /* ChatDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4AA0029C1990E00033121 /* ChatDetailModel.swift */; };
+		F9D45D3A2A0FB2EF00673AEA /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D45D392A0FB2EF00673AEA /* LocalizationSystem.swift */; };
 		F9EA6CF328B228890016F32B /* RecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EA6CF228B228890016F32B /* RecapViewController.swift */; };
 		F9EA6CF628B231E90016F32B /* AppSharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EA6CF528B231E90016F32B /* AppSharedData.swift */; };
 		F9EA6CF828B2324F0016F32B /* userDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EA6CF728B2324F0016F32B /* userDetailModel.swift */; };
@@ -70,13 +76,14 @@
 		F906563228CDFADA00476D65 /* OptionsModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsModelClass.swift; sourceTree = "<group>"; };
 		F906563428CDFB5200476D65 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		F906563728CE5BAD00476D65 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		F9670A7829C0B16F003DD096 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		F9670A7A29C0DBBD003DD096 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F9A5BAF428B0C8E000C2FFE2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		F9A5BAF628B0D60100C2FFE2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F9A5BAF828B0E28200C2FFE2 /* DesiredJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesiredJobViewController.swift; sourceTree = "<group>"; };
 		F9A5BAFA28B1150200C2FFE2 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
 		F9B2C4DC28B1209000328E3F /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
 		F9B2C4DE28B1305100328E3F /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
-		F9B2C4E028B1418A00328E3F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		F9B2C4E428B1425600328E3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9B2C4E628B1425800328E3F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9B2C4EB28B15A7800328E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -118,6 +125,13 @@
 		F9BA022328B032E9002A9579 /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		F9BA022428B032E9002A9579 /* WebServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceHelper.swift; sourceTree = "<group>"; };
 		F9BA022728B03859002A9579 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		F9C4A9FB29C198A800033121 /* ChatDeatilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeatilViewController.swift; sourceTree = "<group>"; };
+		F9C4A9FC29C198A800033121 /* ChatDeatailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDeatailTableViewCell.swift; sourceTree = "<group>"; };
+		F9C4AA0029C1990E00033121 /* ChatDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailModel.swift; sourceTree = "<group>"; };
+		F9D45D392A0FB2EF00673AEA /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalizationSystem.swift; path = UpeAKMe/LocalizationSystem.swift; sourceTree = SOURCE_ROOT; };
+		F9D70D652A0E86670035C277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F9D70D682A0E86A30035C277 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F9D70D6A2A0E8C1A0035C277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Auth.strings; sourceTree = "<group>"; };
 		F9EA6CF228B228890016F32B /* RecapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapViewController.swift; sourceTree = "<group>"; };
 		F9EA6CF528B231E90016F32B /* AppSharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSharedData.swift; sourceTree = "<group>"; };
 		F9EA6CF728B2324F0016F32B /* userDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetailModel.swift; sourceTree = "<group>"; };
@@ -193,6 +207,7 @@
 				F9BA01E128AF9BC0002A9579 /* Model */,
 				F9BA01E028AF9BB3002A9579 /* View */,
 				F9BA01DF28AF9BAA002A9579 /* ViewModel */,
+				F9D45D392A0FB2EF00673AEA /* LocalizationSystem.swift */,
 				F9BA01CB28AF68D0002A9579 /* AppDelegate.swift */,
 				F9BA01D128AF68D0002A9579 /* Main.storyboard */,
 				F9BA01D428AF68D4002A9579 /* Assets.xcassets */,
@@ -214,6 +229,7 @@
 		F9BA01E028AF9BB3002A9579 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9C4A9FF29C198D500033121 /* ChatDetails */,
 				F906563628CE5B9500476D65 /* Profile */,
 				F9EA6D0128B246020016F32B /* Home */,
 				F9EA6CFB28B243290016F32B /* SideMenu */,
@@ -226,10 +242,12 @@
 		F9BA01E128AF9BC0002A9579 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F9C4AA0029C1990E00033121 /* ChatDetailModel.swift */,
 				F906563228CDFADA00476D65 /* OptionsModelClass.swift */,
 				F9EA6CF728B2324F0016F32B /* userDetailModel.swift */,
 				F9EA6CF928B232630016F32B /* SignInDetail.swift */,
 				F906562E28CDC9B000476D65 /* DesiredFieldModel.swift */,
+				F9670A7A29C0DBBD003DD096 /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +398,15 @@
 			path = WebServiceManager;
 			sourceTree = "<group>";
 		};
+		F9C4A9FF29C198D500033121 /* ChatDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F9C4A9FC29C198A800033121 /* ChatDeatailTableViewCell.swift */,
+				F9C4A9FB29C198A800033121 /* ChatDeatilViewController.swift */,
+			);
+			path = ChatDetails;
+			sourceTree = "<group>";
+		};
 		F9EA6CF428B231C20016F32B /* AppShared */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				F9EA6D0228B246210016F32B /* HomeViewController.swift */,
+				F9670A7829C0B16F003DD096 /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -532,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9EA6CF628B231E90016F32B /* AppSharedData.swift in Sources */,
+				F9D45D3A2A0FB2EF00673AEA /* LocalizationSystem.swift in Sources */,
 				F9BA021428B032BA002A9579 /* UIViewController+SideMenu.swift in Sources */,
 				F9BA022628B032E9002A9579 /* WebServiceHelper.swift in Sources */,
 				F9BA01F328B02E1A002A9579 /* ValidationManager.swift in Sources */,
@@ -542,10 +571,12 @@
 				F9A5BAFB28B1150200C2FFE2 /* LocationInfoViewController.swift in Sources */,
 				F9BA01F828B03043002A9579 /* Extensions.swift in Sources */,
 				F9BA01E628B01C58002A9579 /* SelectLanguageViewController.swift in Sources */,
+				F9670A7B29C0DBBD003DD096 /* ChatModel.swift in Sources */,
 				F9BA021D28B032BA002A9579 /* BasicTransitionAnimator.swift in Sources */,
 				F9BA021C28B032BA002A9579 /* SideMenuController.swift in Sources */,
 				F9A5BAF528B0C8E000C2FFE2 /* ForgotPasswordViewController.swift in Sources */,
 				F9BA01EF28B02BFD002A9579 /* AlertViewController.swift in Sources */,
+				F9C4AA0129C1990E00033121 /* ChatDetailModel.swift in Sources */,
 				F9BA01F128B02D43002A9579 /* MessageConstant.swift in Sources */,
 				F906562F28CDC9B000476D65 /* DesiredFieldModel.swift in Sources */,
 				F9EA6D0028B2434D0016F32B /* AppSideMenuTableViewCell.swift in Sources */,
@@ -557,6 +588,7 @@
 				F906563328CDFADA00476D65 /* OptionsModelClass.swift in Sources */,
 				F9BA022528B032E9002A9579 /* WebServiceManager.swift in Sources */,
 				F9EA6CFA28B232630016F32B /* SignInDetail.swift in Sources */,
+				F9C4A9FD29C198A800033121 /* ChatDeatilViewController.swift in Sources */,
 				F906563128CDD4AF00476D65 /* PopUpViewController.swift in Sources */,
 				F9B2C4DF28B1305100328E3F /* EducationViewController.swift in Sources */,
 				F9BA022128B032BA002A9579 /* SWRevealViewController.m in Sources */,
@@ -567,8 +599,10 @@
 				F9BA021928B032BA002A9579 /* UIViewController+Container.swift in Sources */,
 				F9BA021628B032BA002A9579 /* Preferences.swift in Sources */,
 				F9BA021F28B032BA002A9579 /* RevealViewController.swift in Sources */,
+				F9C4A9FE29C198A800033121 /* ChatDeatailTableViewCell.swift in Sources */,
 				F9BA01FD28B0328E002A9579 /* FloatRatingView.swift in Sources */,
 				F9BA01ED28B028EF002A9579 /* LoginViewController.swift in Sources */,
+				F9670A7929C0B16F003DD096 /* HomeTableViewCell.swift in Sources */,
 				F9BA021528B032BA002A9579 /* StatusBar.swift in Sources */,
 				F9BA01CC28AF68D0002A9579 /* AppDelegate.swift in Sources */,
 				F9EA6CF328B228890016F32B /* RecapViewController.swift in Sources */,
@@ -597,6 +631,7 @@
 			children = (
 				F9B2C4EB28B15A7800328E3F /* Base */,
 				F9B2C4ED28B15AAE00328E3F /* fr */,
+				F9D70D6A2A0E8C1A0035C277 /* en */,
 			);
 			name = Auth.storyboard;
 			sourceTree = "<group>";
@@ -605,7 +640,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F9BA01D228AF68D0002A9579 /* Base */,
-				F9B2C4E028B1418A00328E3F /* fr */,
+				F9D70D652A0E86670035C277 /* en */,
+				F9D70D682A0E86A30035C277 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -751,8 +787,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,6 +797,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.UpeAKMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohit/Rohit's WorkSpace/Freelance/UpeAKMe/UpeAKMe/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
@@ -781,8 +821,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,6 +831,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.UpeAKMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohit/Rohit's WorkSpace/Freelance/UpeAKMe/UpeAKMe/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;

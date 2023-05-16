@@ -71,6 +71,7 @@ class userDetailModel: NSObject {
     var strDesiredValue: String = ""
     var strbrailLanguage: String = ""
     
+    
     init(dict : [String:Any]) {
        
         if let auth_token = dict["auth_token"] as? String{

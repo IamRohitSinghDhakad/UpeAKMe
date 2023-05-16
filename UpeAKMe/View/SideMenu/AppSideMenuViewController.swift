@@ -35,12 +35,12 @@ class AppSideMenuViewController: UIViewController {
     
     var selectedIndexpath = 0
     var strBadgeCount : Int?
+    var imagePicker = UIImagePickerController()
+    var pickedImage:UIImage?
     
     private let menus: [SideMenuOptions] = [
         SideMenuOptions(
-            menuName: MenuName.MyProfile, menuImageName: "", menuSelectedImageName: ""),
-        SideMenuOptions(
-            menuName: MenuName.Logout, menuImageName: "", menuSelectedImageName: "")]
+            menuName: MenuName.MyProfile, menuImageName: "", menuSelectedImageName: "")]
     
     
     //MARK: - Override Methods
@@ -48,22 +48,26 @@ class AppSideMenuViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
+        imagePicker.delegate = self
         // Along with auto layout, these are the keys for enabling variable cell height
         tableView.estimatedRowHeight = 60.0
         controllerMenuSetup()
         sideMenuController?.delegate = self
+        
+     //   call_GetProfile(strUserID: objAppShareData.UserDetail.strUserId)
+        
+        let profilePic = objAppShareData.UserDetail.strProfilePicture
+        if profilePic != "" {
+            let url = URL(string: profilePic)
+            self.imgVwUser.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "white"))
+        }
+
+        self.lblName.text = objAppShareData.UserDetail.strFirstName + objAppShareData.UserDetail.strLastName
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        let profilePic = objAppShareData.UserDetail.strProfilePicture
-//        if profilePic != "" {
-//            let url = URL(string: profilePic)
-//            self.imgVwUser.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo"))
-//        }
-//
-//        self.lblName.text = objAppShareData.UserDetail.strUserName
+      
 //
 //        self.tableView.updateRow(row: 4)
 
@@ -75,6 +79,11 @@ class AppSideMenuViewController: UIViewController {
         }, with: "0")
         
     }
+    
+    @IBAction func btnAddImage(_ sender: Any) {
+        setImage()
+    }
+    
     
     private func configureView() {
         SideMenuController.preferences.basic.menuWidth = view.frame.width * 0.7
@@ -229,3 +238,215 @@ extension UITableView
     }
     
 }
+
+
+
+extension AppSideMenuViewController{
+    
+    func call_GetProfile(strUserID:String){
+        if !objWebServiceManager.isNetworkAvailable(){
+            objWebServiceManager.hideIndicator()
+            objAlert.showAlert(message: "No Internet Connection", title: "Alert", controller: self)
+            return
+        }
+        
+        objWebServiceManager.showIndicator()
+        
+        let parameter = ["user_id":strUserID,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage]as [String:Any]
+        
+        
+        objWebServiceManager.requestPost(strURL: WsUrl.url_GetProfile, queryParams: [:], params: parameter, strCustomValidation: "", showIndicator: true) { response in
+           
+            objWebServiceManager.hideIndicator()
+            let status = (response["status"] as? Int)
+            let message = (response["message"] as? String)
+            
+            debugPrint(response)
+            
+            if status == MessageConstant.k_StatusCode{
+                
+                if let user_details  = response["result"] as? [String:Any] {
+                    
+                
+                    
+                    let profilePic = user_details["user_image"] as? String ?? ""
+                    if profilePic != "" {
+                        let url = URL(string: profilePic)
+                        self.imgVwUser.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "white"))
+                    }else{
+                        self.imgVwUser.image = UIImage.init(named: "LOGo")
+                    }
+                       
+                   
+
+                }
+                
+            }else{
+                objWebServiceManager.hideIndicator()
+                if let result  = response["result"] as? String {
+                    if result == "User not found"{
+                        objAppShareData.signOut()
+                    }
+                }else{
+                    objAlert.showAlert(message: message ?? "", title: "Alert", controller: self)
+                }
+                
+            }
+            
+            
+        } failure: { (Error) in
+            print(Error)
+            objWebServiceManager.hideIndicator()
+        }
+    }
+    
+    
+    func callWebserviceForCompleteProfile(){
+        
+        if !objWebServiceManager.isNetworkAvailable(){
+            objWebServiceManager.hideIndicator()
+            
+            objAlert.showAlert(message: "No Internet Connection", title: "Alert", controller: self)
+            return
+        }
+        objWebServiceManager.showIndicator()
+        self.view.endEditing(true)
+        
+        var imageData = [Data]()
+        var imgData : Data?
+        if self.pickedImage != nil{
+            imgData = (self.pickedImage?.jpegData(compressionQuality: 1.0))!
+        }
+        else {
+            imgData = (self.imgVwUser.image?.jpegData(compressionQuality: 1.0))!
+        }
+        imageData.append(imgData!)
+        
+        let imageParam = ["user_image"]
+        
+        let dicrParam = ["user_id":objAppShareData.UserDetail.strUserId,
+                         "language":objAppShareData.UserDetail.strSelectedLanguage]as [String:Any]
+                
+        objWebServiceManager.uploadMultipartWithImagesData(strURL: WsUrl.url_completeProfile, params: dicrParam, showIndicator: true, customValidation: "", imageData: imgData, imageToUpload: imageData, imagesParam: imageParam, fileName: "user_image", mimeType: "image/jpeg") { (response) in
+           
+            let status = (response["status"] as? Int)
+            let message = (response["message"] as? String)
+            
+            debugPrint(response)
+            
+            if status == MessageConstant.k_StatusCode{
+            
+                if let user_details  = response["result"] as? [String:Any]{
+                    
+                    objAppShareData.SaveUpdateUserInfoFromAppshareData(userDetail: user_details)
+                    objAppShareData.fetchUserInfoFromAppshareData()
+                    
+                    let profilePic = objAppShareData.UserDetail.strProfilePicture
+                    if profilePic != "" {
+                        let url = URL(string: profilePic)
+                        self.imgVwUser.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "white"))
+                    }
+
+                    objWebServiceManager.hideIndicator()
+                    self.lblName.text = objAppShareData.UserDetail.strFirstName + objAppShareData.UserDetail.strLastName
+                    
+                }
+
+
+            }else{
+                objWebServiceManager.hideIndicator()
+                objAlert.showAlert(message: message ?? "", title: "Alert", controller: self)
+            }
+        } failure: { (Error) in
+            print(Error)
+        }
+    }
+    
+}
+
+//MARK: Camera Access
+extension AppSideMenuViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    
+    func setImage(){
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        let alert:UIAlertController=UIAlertController(title: "Choose Image".localized(), message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera".localized(), style: UIAlertAction.Style.default)
+        {
+            UIAlertAction in
+            self.openCamera()
+        }
+        
+        let galleryAction = UIAlertAction(title: "Gallery".localized(), style: UIAlertAction.Style.default)
+        {
+            UIAlertAction in
+            self.openGallery()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: UIAlertAction.Style.cancel)
+        {
+            UIAlertAction in
+        }
+        alert.addAction(cameraAction)
+        alert.addAction(galleryAction)
+        alert.addAction(cancelAction)
+        alert.popoverPresentationController?.sourceView = self.view
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // Open camera
+    func openCamera()
+    {
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+        {
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.modalPresentationStyle = .fullScreen
+            self .present(imagePicker, animated: true, completion: nil)
+        } else {
+            self.openGallery()
+        }
+    }
+    
+    // Open gallery
+    func openGallery()
+    {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imagePicker.modalPresentationStyle = .fullScreen
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            self.pickedImage = editedImage
+            self.imgVwUser.image = self.pickedImage
+            callWebserviceForCompleteProfile()
+            imagePicker.dismiss(animated: true, completion: nil)
+            
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            self.pickedImage = originalImage
+            self.imgVwUser.image = pickedImage
+            callWebserviceForCompleteProfile()
+            imagePicker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func cornerImage(image: UIImageView, color: UIColor ,width: CGFloat){
+        image.layer.cornerRadius = image.layer.frame.size.height / 2
+        image.layer.masksToBounds = false
+        image.layer.borderColor = color.cgColor
+        image.layer.borderWidth = width
+        
+    }
+    
+    
+}
+
+
+
